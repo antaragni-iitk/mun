@@ -15,7 +15,6 @@ export class PaymentService {
   }
 
   showPopup(data: any) {
-  	console.log(data);
     this.waitPromise.then(() => popupWithAutoFill(data));
   }
 
