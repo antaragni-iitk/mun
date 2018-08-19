@@ -40,6 +40,7 @@ import {CounterComponent} from './homepage/components/counter/counter.component'
 import { FooterComponent } from './homepage/components/footer/footer.component';
 import { SponsorsComponent } from './homepage/components/sponsors/sponsors.component';
 import {DialogMessageComponent} from '@services/fblogin.service';
+import { TestComponent } from './test/test.component';
 
 
 @NgModule({
@@ -66,7 +67,8 @@ import {DialogMessageComponent} from '@services/fblogin.service';
     FooterComponent,
     SocialLinksComponent,
     SponsorsComponent,
-    DialogMessageComponent
+    DialogMessageComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,

@@ -26,7 +26,8 @@
               "src/styles.css"
             ],
             "scripts": [
-              "./node_modules/scrollreveal/dist/scrollreveal.js"
+              "./node_modules/scrollreveal/dist/scrollreveal.js",
+              "./townscript.js"
             ]
           },
           "configurations": {
