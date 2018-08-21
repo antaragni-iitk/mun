@@ -10,13 +10,13 @@ import {FbloginService} from '../services/fblogin.service';
 })
 
 export class NavbarComponent {
-  links: Link[] = [
-    {name: 'Home', id: 'home'},
-    {name: 'Leaderboard', id: 'leaderboard'},
-    {name: 'Ideas', id: 'ideas'},
-  ];
+  // links: Link[] = [
+  //   {name: 'Home', id: 'home'},
+  //   {name: 'Leaderboard', id: 'leaderboard'},
+  //   {name: 'Ideas', id: 'ideas'},
+  // ];
 
-  @Input() selectedLink: string = this.links[0].name;
+  @Input() selectedLink: string = 'home';
 
   constructor(private ui: UiService, private fblogin: FbloginService) {
   }

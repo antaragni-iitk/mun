@@ -1,3 +1,4 @@
+import { HomeComponent } from './homepage/components/home/home.component';
 import { SocialLinksComponent } from './homepage/components/social-links/social-links.component';
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
@@ -14,7 +15,6 @@ import {RespComponent} from './homepage/components/responsibilities/resp.compone
 import {AboutComponent} from './homepage/components/about/about.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
-import {HomeComponent} from './dashboard/components/home/home.component';
 import {LeaderboardComponent} from './dashboard/components/leaderboard/leaderboard.component';
 import {IdeasComponent} from './dashboard/components/ideas/ideas.component';
 import {AppRoutingModule} from './app-routing.module';
@@ -23,7 +23,6 @@ import {UiService} from './services/ui.service';
 import {ContentService} from './services/content.service';
 import {RegisterComponent} from './dashboard/components/register/register.component';
 import {FormsModule} from '@angular/forms';
-import {TncComponent} from './dashboard/components/register/tnc/tnc.component';
 import {AngularFireAuthModule} from 'angularfire2/auth';
 import {AngularFireModule} from 'angularfire2';
 import {Funcs} from './utility/function';
@@ -40,6 +39,11 @@ import {CounterComponent} from './homepage/components/counter/counter.component'
 import { FooterComponent } from './homepage/components/footer/footer.component';
 import { SponsorsComponent } from './homepage/components/sponsors/sponsors.component';
 import {DialogMessageComponent} from '@services/fblogin.service';
+import { SidenavComponent } from './homepage/components/sidenav/sidenav.component';
+import { ResourcesComponent } from './homepage/components/resources/resources.component';
+import { RegisterationComponent } from './homepage/components/registeration/registeration.component';
+import { MouseDownComponent } from './homepage/components/footer/mouse-down/mouse-down.component';
+import { CommitteesComponent } from './homepage/components/committees/committees.component';
 
 
 @NgModule({
@@ -58,7 +62,6 @@ import {DialogMessageComponent} from '@services/fblogin.service';
     IdeasComponent,
     LandingComponent,
     RegisterComponent,
-    TncComponent,
     AnalyticsDirective,
     AntaragniFeedComponent,
     FaqComponent,
@@ -66,7 +69,12 @@ import {DialogMessageComponent} from '@services/fblogin.service';
     FooterComponent,
     SocialLinksComponent,
     SponsorsComponent,
-    DialogMessageComponent
+    DialogMessageComponent,
+    SidenavComponent,
+    ResourcesComponent,
+    RegisterationComponent,
+    MouseDownComponent,
+    CommitteesComponent
   ],
   imports: [
     BrowserModule,

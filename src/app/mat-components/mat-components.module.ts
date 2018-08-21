@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {
   MatButtonModule, MatCardModule, MatDatepickerModule, MatDialogModule, MatDividerModule, MatInputModule, MatNativeDateModule,
-  MatPaginatorModule,
+  MatPaginatorModule, MatListModule,
   MatSelectModule, MatSnackBarModule, MatSortModule, MatTableModule, MatTabsModule, MatTooltipModule
 } from '@angular/material';
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -24,6 +24,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatSnackBarModule,
     MatSidenavModule,
     MatDialogModule,
+    MatListModule,
   ]
 })
 export class MatComponentsModule {

@@ -1,0 +1,24 @@
+.mouse{
+    width: 18px;
+    height: 34px;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    position: absolute;
+    bottom: 38px;
+    left: 31vw;
+}
+
+.wheel{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    position: relative;
+    top: 4px;
+    left: calc(50% - 2.5px);
+    background-color: white;
+    transition: 0.3s;
+}
+
+.mouse:hover .wheel{
+    top: calc(100% - 7.5px);
+}

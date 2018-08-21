@@ -1,0 +1,21 @@
+<div class="_container">
+  <mat-sidenav-container class="_sidenav">
+    <mat-sidenav #sidenav class="_side" mode="side" opened fixedInViewport="true" fixedTopGap="0" fixedBottomGap="0"  fxLayout="column" fxLayoutAlign="center">
+      <mat-nav-list class="_list">
+        <div mat-list-item class="navigation" role="navigation"
+        *ngFor="let link of links"
+        >
+        <i [class]="link.class"></i>
+         {{link.name}}
+      </div>
+      </mat-nav-list>
+    </mat-sidenav>
+    <app-home></app-home>
+    <app-about></app-about>
+    <app-resources></app-resources>
+    <app-registeration></app-registeration>
+    <app-contact></app-contact>
+    <app-mouse-down></app-mouse-down>
+    <app-committees></app-committees>
+  </mat-sidenav-container>
+</div>

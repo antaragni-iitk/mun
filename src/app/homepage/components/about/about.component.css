@@ -1,60 +1,24 @@
-.body{
-	width:100%;
-	min-width:100%;
-	margin: 0;
-	height: 60%;
-	min-height: 60%;
-	color: #ffffff;
-}
-
-.description{
-	margin-top: 2.5em;
-	line-height: 2em;
-	letter-spacing: 2px;
-	font-family: 'Open Sans', sans-serif;
-}
-
-.about_text{
-	width:55%;
-	padding: 5em;
-	background: #00affe;
-}
-
-.client{
-	padding: 2em;
-}
-
 .heading{
-	letter-spacing: 2px;
-	word-spacing: 1px;
-	font-size: 3.2em;
-	font-family: 'Yanone_Kaffeesatz', sans-serif;
-	font-weight: 600;
+	color: white;
+	font-size: 3.5rem;
+	font-weight: 700;
+	line-height: 1.1;
 	display: block;
-
+	margin-bottom: 1rem;
+	/* text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); */
 }
 
-.heading span{
-	font-weight: 300;
+.body{
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.75;
+	color: white;
+	opacity: 0.75;
+	width: 55vw;
 }
 
-.about_image{
-  background: url("https://drive.google.com/uc?export=view&id=1-r2z8HOhXGxKbdGmdWpcHiqe8FeaWEu_") no-repeat left top;
-  background-size: cover;
-  width: 45%;
-}
-
-@media (max-width: 1023px) {
-  .about_text{
-    width: 100%;
-    padding: 10px;
-  }
-
-  .body{
-    height: auto;
-  }
-
-  .about_image{
-    display: none;
-  }
+.about{
+	max-width: 800px;
+	height: 100vh;
+	margin-right: 14vw;
 }

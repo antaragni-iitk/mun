@@ -7,7 +7,6 @@ import {LandingComponent} from './homepage/components/landing/landing.component'
 import {IdeasComponent} from './dashboard/components/ideas/ideas.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {RegisterComponent} from './dashboard/components/register/register.component';
-import {TncComponent} from './dashboard/components/register/tnc/tnc.component';
 import {AuthGuard, guards, LocalUserGuard, LoggedInGuard, RegisteredGuard, RegisteredUserGuard} from './guards';
 import {AntaragniFeedComponent} from './antaragni-feed';
 
@@ -30,7 +29,6 @@ const routes: Routes = [
         path: 'register', component: RegisterComponent,
         canActivate: [RegisteredGuard]
       },
-      {path: 'register/tnc', component: TncComponent},
     ]
   },
 ];
