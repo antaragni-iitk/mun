@@ -44,6 +44,7 @@ import { ResourcesComponent } from './homepage/components/resources/resources.co
 import { RegisterationComponent } from './homepage/components/registeration/registeration.component';
 import { MouseDownComponent } from './homepage/components/footer/mouse-down/mouse-down.component';
 import { CommitteesComponent } from './homepage/components/committees/committees.component';
+import { TestComponent } from './test/test.component';
 
 
 @NgModule({
@@ -74,7 +75,8 @@ import { CommitteesComponent } from './homepage/components/committees/committees
     ResourcesComponent,
     RegisterationComponent,
     MouseDownComponent,
-    CommitteesComponent
+    CommitteesComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
