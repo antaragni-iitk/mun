@@ -5,6 +5,7 @@ import {NgModule} from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatComponentsModule} from './mat-components/mat-components.module';
+import { ParticlesModule } from 'angular-particle';
 
 import {AppComponent} from './app-component/app.component';
 import {BannerComponent} from './homepage/components/banner/banner.component';
@@ -91,6 +92,7 @@ import { TestComponent } from './test/test.component';
     NgsRevealModule.forRoot(),
     MatComponentsModule,
     FacebookModule.forRoot(),
+    ParticlesModule,
   ],
   providers: [UiService, Funcs, AntaragniFeedService, ContentService],
   bootstrap: [AppComponent],
