@@ -15,10 +15,33 @@
 	color: white;
 	opacity: 0.75;
 	width: 55vw;
+	text-align: center;
 }
 
 .about{
 	max-width: 800px;
 	height: 100vh;
 	margin-right: 14vw;
+}
+
+._buttons{
+	margin-top: 1rem;
+}
+
+.btn{
+    margin-bottom: 8px;
+    border-radius: 10rem;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    background: none;
+    line-height: .8;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    min-height: 38px;
+}
+
+.btn:hover{
+    color: rgba(255, 255, 255, 0.5);
+    border-color: rgba(255, 255, 255, 0.5);
+    background-color: transparent
 }

@@ -13,7 +13,7 @@ export class SidenavComponent implements OnInit {
     {name: 'Committees', id: 'committees', class: 'fa fa-home'},
     {name: 'Resources', id: 'resources', class: 'fa fa-home'},
     {name: 'Registeration', id: 'registeration', class: 'fa fa-home'},
-    {name: 'Ambassadors', id: 'ambassadors', class: 'fa fa-home'},
+    // {name: 'Ambassadors', id: 'ambassadors', class: 'fa fa-home'},
     {name: 'FAQ', id: 'faq', class: 'fa fa-home'},
     {name: 'Contact Us', id: 'contact', class: 'fa fa-home'},
   ];

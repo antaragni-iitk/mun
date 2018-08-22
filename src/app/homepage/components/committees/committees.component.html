@@ -1,14 +1,14 @@
 <div class="committees" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="30px">
   <div class="committee" *ngFor="let committee of committees.slice(0,3)">
-    <div class="image"><img [src]="committee.img" alt=""></div>
+    <div class="image" (click)="openDialog(committee)"><img [src]="committee.img" alt=""></div>
     <div class="heading">{{committee.name}}</div>
-    <div class="btn">Learn More...</div>
+    <div class="btn" (click)="openDialog(committee)">Learn More...</div>
   </div>
 </div>
 <div class="committees" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="30px">
   <div class="committee" *ngFor="let committee of committees.slice(3,6)">
-    <div class="image"><img [src]="committee.img" alt=""></div>
+    <div class="image" (click)="openDialog(committee)"><img [src]="committee.img" alt=""></div>
     <div class="heading">{{committee.name}}</div>
-    <div class="btn">Learn More...</div>
+    <div class="btn" (click)="openDialog(committee)">Learn More...</div>
   </div>
 </div>

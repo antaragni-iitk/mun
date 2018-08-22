@@ -9,10 +9,8 @@ import { ParticlesModule } from 'angular-particle';
 
 import {AppComponent} from './app-component/app.component';
 import {BannerComponent} from './homepage/components/banner/banner.component';
-import {PropertiesComponent} from './homepage/components/properties/properties.component';
 import {HeaderComponent} from './homepage/components/header/header.component';
 import {ContactComponent} from './homepage/components/contact/contact.component';
-import {RespComponent} from './homepage/components/responsibilities/resp.component';
 import {AboutComponent} from './homepage/components/about/about.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
@@ -36,7 +34,6 @@ import {AntaragniFeedService} from './services/feed';
 import {AntaragniFeedComponent} from './antaragni-feed';
 import {FacebookModule} from 'ngx-facebook';
 import {FaqComponent} from './homepage/components/faq/faq.component';
-import {CounterComponent} from './homepage/components/counter/counter.component';
 import { FooterComponent } from './homepage/components/footer/footer.component';
 import { SponsorsComponent } from './homepage/components/sponsors/sponsors.component';
 import {DialogMessageComponent} from '@services/fblogin.service';
@@ -46,16 +43,17 @@ import { RegisterationComponent } from './homepage/components/registeration/regi
 import { MouseDownComponent } from './homepage/components/footer/mouse-down/mouse-down.component';
 import { CommitteesComponent } from './homepage/components/committees/committees.component';
 import { TestComponent } from './test/test.component';
+import { CommitteeComponent } from './homepage/components/committees/committee/committee.component';
+import { AntaragniComponent } from './homepage/components/about/antaragni/antaragni.component';
+import { LetterComponent } from './homepage/components/about/letter/letter.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     BannerComponent,
-    PropertiesComponent,
     HeaderComponent,
     ContactComponent,
-    RespComponent,
     AboutComponent,
     NavbarComponent,
     DashboardComponent,
@@ -67,7 +65,6 @@ import { TestComponent } from './test/test.component';
     AnalyticsDirective,
     AntaragniFeedComponent,
     FaqComponent,
-    CounterComponent,
     FooterComponent,
     SocialLinksComponent,
     SponsorsComponent,
@@ -77,7 +74,10 @@ import { TestComponent } from './test/test.component';
     RegisterationComponent,
     MouseDownComponent,
     CommitteesComponent,
-    TestComponent
+    TestComponent,
+    CommitteeComponent,
+    AntaragniComponent,
+    LetterComponent,
   ],
   imports: [
     BrowserModule,
@@ -96,7 +96,7 @@ import { TestComponent } from './test/test.component';
   ],
   providers: [UiService, Funcs, AntaragniFeedService, ContentService],
   bootstrap: [AppComponent],
-  entryComponents: [DialogMessageComponent]
+  entryComponents: [DialogMessageComponent, CommitteeComponent, AntaragniComponent, LetterComponent ]
 })
 export class AppModule {
 }

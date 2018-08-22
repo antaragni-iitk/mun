@@ -36,3 +36,15 @@
 .incent a {
   color: #ee3158;
 }
+
+.cdk-overlay-dark-backdrop {
+  background: rgba(0,0,0,.488);
+}
+
+.mat-dialog-container {
+  background: rgba(0,0,0,.7);
+}
+
+.mat-dialog-actions{
+  padding-bottom: none
+}

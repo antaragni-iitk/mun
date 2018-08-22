@@ -25,6 +25,12 @@
     margin-right: 14vw;
 }
 
+img{
+    /* border-radius: 50%; */
+    height: 13vw;
+    width: 13vw;
+}
+
 .btn{
     margin-bottom: 8px;
     border-radius: 10rem;

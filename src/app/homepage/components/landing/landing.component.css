@@ -18,3 +18,51 @@
     bottom: 6vh;
   }
 }
+
+.page-cover{
+  width: 100vw;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.page-cover:after {
+  content: "";
+  background: -webkit-gradient(linear, right top, left top, from(#D1335B), to(#00152e));
+  background: linear-gradient(to left, #D1335B, #00152e);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0.7;
+}
+
+.cover-bg{
+  background-image: url(http://demo.highhay.com/simpleux/img/bg-default1.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -1;
+}
+
+.cover-bg-mask{
+  background-color: rgba(2, 3, 10, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}

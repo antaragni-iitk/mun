@@ -1,18 +1,16 @@
-<div class="_container" #faq>
-  <h1>
-    FAQs
-  </h1>
-  <div class="questions" fxLayout="row wrap">
-    <div class="col-md-6">
-      <div class="question" *ngFor="let i of (data | async)?.slice(0,len/2)">
-        <h5 [innerHTML]="i?.questions?.content"></h5>
-        <p [innerHTML]="i?.answers?.content"></p>
+<div class="faq" #faq fxLayout="column" fxLayoutAlign="center center">
+  <div class="heading">FAQs</div>
+  <div class="questions" fxLayout="row" fxLayoutAlign="center center">
+    <div class="set1">
+      <div class="questions1" *ngFor="let i of (data | async)?.slice(0,len/2)" fxLayout="column" fxLayoutAlign="center center">
+        <div class="question" [innerHTML]="i?.questions?.content"></div>
+        <div class="answer" [innerHTML]="i?.answers?.content"></div>
       </div>
     </div>
-    <div class="col-md-6">
-      <div class="question" *ngFor="let i of (data | async)?.slice(len/2,len)">
-        <h5 [innerHTML]="i?.questions?.content"></h5>
-        <p [innerHTML]="i?.answers?.content"></p>
+    <div class="set2">
+      <div class="questions2" *ngFor="let i of (data | async)?.slice(len/2,len)" fxLayout="column" fxLayoutAlign="center center">
+        <div class="question" [innerHTML]="i?.questions?.content"></div>
+        <div class="answer" [innerHTML]="i?.answers?.content"></div>
       </div>
     </div>
   </div>

@@ -1,23 +1,31 @@
+i{
+  font-size: 24px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 8px;
+}
+
+i:hover{
+  color: rgba(255, 255, 255, 1);
+}
+
+.fa-linkedin{
+  color: unset;
+  background-color: rgba(255, 255, 255, 0.5);  
+}
+
+.fa-linkedin:hover{
+  color: unset;
+  background-color: rgba(255, 255, 255, 1);  
+}
+
+.social-link{
+  background-color: transparent;
+}
+
 .footer{
-  background-color: #333;
-  color: white;
-  font-family: open-sans;
-  height: 8vh;
-  letter-spacing: 2px;
-  text-align: center;
-}
-
-span{
-  color: yellow;
-}
-
-div{
-  filter: grayscale(50%);
-  margin: 0 10px;
-}
-
-@media (max-width: 768px) {
-  .not-mobile{
-    display: none;
-  }
+  position: fixed;
+  z-index: 6;
+  bottom: 32px;
+  right: 64px;
 }

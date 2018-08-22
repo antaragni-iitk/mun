@@ -15,24 +15,17 @@
 img{
     width: 246px;
     height: 140px;
-    -webkit-box-shadow: 0 0 0px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 0px rgba(0, 0, 0, 0.1);
-    transition: .2s;
-}
-
-img:hover{
-    background: #1d1d1d;
-    -webkit-box-shadow: 0 5px 80px rgba(0, 0, 0, 0.15);
-    box-shadow: 0 5px 80px rgba(0, 0, 0, 0.15);
+    transition: 2s;
 }
 
 .image{
     overflow: hidden;
+    cursor: pointer;
 }
-/* 
+
 .image:hover img{
-    transform: scale(1.02);
-} */
+    transform: scale(1.07);
+}
 
 .btn{
     margin-bottom: 8px;
