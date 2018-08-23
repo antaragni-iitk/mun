@@ -46,6 +46,7 @@ import { TestComponent } from './test/test.component';
 import { CommitteeComponent } from './homepage/components/committees/committee/committee.component';
 import { AntaragniComponent } from './homepage/components/about/antaragni/antaragni.component';
 import { LetterComponent } from './homepage/components/about/letter/letter.component';
+import { RegisterDialogComponent } from './homepage/components/registeration/register-dialog/register-dialog.component';
 
 
 @NgModule({
@@ -78,6 +79,7 @@ import { LetterComponent } from './homepage/components/about/letter/letter.compo
     CommitteeComponent,
     AntaragniComponent,
     LetterComponent,
+    RegisterDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -96,7 +98,7 @@ import { LetterComponent } from './homepage/components/about/letter/letter.compo
   ],
   providers: [UiService, Funcs, AntaragniFeedService, ContentService],
   bootstrap: [AppComponent],
-  entryComponents: [DialogMessageComponent, CommitteeComponent, AntaragniComponent, LetterComponent ]
+  entryComponents: [DialogMessageComponent, CommitteeComponent, AntaragniComponent, LetterComponent, RegisterDialogComponent]
 })
 export class AppModule {
 }

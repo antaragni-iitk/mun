@@ -1,3 +1,15 @@
-<p>
-  registeration works!
-</p>
+<div class="registeration" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="50px">
+  <div class="content">
+    You can register as a
+  </div>
+  <div class="registers" fxLayout="row" fxLayoutAlign="center" fxLayoutGap="30px">
+    <div class="register" *ngFor="let register of registers" (click)="openDialog(register)" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="0px">
+      <div class="image">
+        <img [src]="register.url" alt="">
+      </div>
+      <div class="img_footer" fxLayout="row" fxLayoutAlign="center center">
+        <div class="btn" href="">{{register.name}}</div>
+      </div>
+    </div>
+  </div>
+</div>

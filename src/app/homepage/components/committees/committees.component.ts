@@ -68,7 +68,6 @@ export class CommitteesComponent implements OnInit {
 
   openDialog(committee: any) {
     let dialogRef = this.dialog.open(CommitteeComponent, {
-      height: '80vh',
       data: committee,
     });
     // console.log(committee)
