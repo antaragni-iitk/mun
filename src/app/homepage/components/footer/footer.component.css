@@ -1,11 +1,10 @@
 i{
   font-size: 24px;
-  cursor: pointer;
   color: rgba(255, 255, 255, 0.5);
   margin: 0 8px;
 }
 
-i:hover{
+.social-link:hover i{
   color: rgba(255, 255, 255, 1);
 }
 
@@ -14,12 +13,13 @@ i:hover{
   background-color: rgba(255, 255, 255, 0.5);  
 }
 
-.fa-linkedin:hover{
+.social-link:hover .fa-linkedin{
   color: unset;
   background-color: rgba(255, 255, 255, 1);  
 }
 
 .social-link{
+  cursor: pointer;
   background-color: transparent;
 }
 

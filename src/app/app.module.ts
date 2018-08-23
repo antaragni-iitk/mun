@@ -1,3 +1,4 @@
+import { LetterComponent } from './homepage/components/about/letter/letter.component';
 import { HomeComponent } from './homepage/components/home/home.component';
 import { SocialLinksComponent } from './homepage/components/social-links/social-links.component';
 import {BrowserModule} from '@angular/platform-browser';
@@ -45,7 +46,6 @@ import { CommitteesComponent } from './homepage/components/committees/committees
 import { TestComponent } from './test/test.component';
 import { CommitteeComponent } from './homepage/components/committees/committee/committee.component';
 import { AntaragniComponent } from './homepage/components/about/antaragni/antaragni.component';
-import { LetterComponent } from './homepage/components/about/letter/letter.component';
 import { RegisterDialogComponent } from './homepage/components/registeration/register-dialog/register-dialog.component';
 
 

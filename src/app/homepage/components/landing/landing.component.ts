@@ -24,7 +24,7 @@ export class LandingComponent implements OnInit {
       'position': 'fixed',
       'width': '100vw',
       'height': '100vh',
-      'z-index': -1,
+      'z-index': 0,
       'top': 0,
       'left': 0,
       'right': 0,
@@ -34,7 +34,7 @@ export class LandingComponent implements OnInit {
     this.myParams = {
       particles: {
         number: {
-          value: 80,
+          value: 50,
         },
         color: {
           value: '#ffffff'
@@ -60,17 +60,17 @@ export class LandingComponent implements OnInit {
           anim: {
             enable: false,
             speed: 1,
-            opacity_min: 0.7,
+            opacity_min: 0.1,
             sync: false
           }
         },
         size: {
-          value: 3,
+          value: 2,
           random: true,
           anim: {
             enable: false,
             speed: 40,
-            size_min: 1,
+            size_min: 0.3,
             sync: false
           }
         },
@@ -78,12 +78,12 @@ export class LandingComponent implements OnInit {
           enable: true,
           distance: 150,
           color: '#ffffff',
-          opacity: 0.8,
-          width: 2
+          opacity: 0.5,
+          width: 1
         },
         move: {
           enable: true,
-          speed: 8,
+          speed: 5,
           direction: 'none',
           random: true,
           straight: false,
