@@ -9,7 +9,9 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 export class SidenavComponent implements OnInit {
   mobile: boolean = window.screen.width < 1024;
 
-  links: Link[] = [
+  inView = 0;
+
+  links = [
     {name: 'Home', id: 'home', class: 'fa fa-home'},
     {name: 'About', id: 'about', class: 'fa fa-home'},
     {name: 'Committees', id: 'committees', class: 'fa fa-home'},
@@ -48,6 +50,16 @@ export class SidenavComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+  scrollSpy($event) {
+    if($event.srcElement.scrollTop <= window.screen.height/2) this.inView = 0;
+    if(($event.srcElement.scrollTop <= (window.screen.height*3/2)) && ($event.srcElement.scrollTop > (window.screen.height/2))) this.inView = 1;
+    if(($event.srcElement.scrollTop <= (window.screen.height*7/2)) && ($event.srcElement.scrollTop > (window.screen.height*3/2))) this.inView = 2;
+    if(($event.srcElement.scrollTop <= (window.screen.height*9/2)) && ($event.srcElement.scrollTop > (window.screen.height*7/2))) this.inView = 3;
+    if(($event.srcElement.scrollTop <= (window.screen.height*11/2)) && ($event.srcElement.scrollTop > (window.screen.height*17/4))) this.inView = 4;
+    if(($event.srcElement.scrollTop <= (window.screen.height*13/2)) && ($event.srcElement.scrollTop > (window.screen.height*11/2))) this.inView = 5;
+    if(($event.srcElement.scrollTop > (window.screen.height*13/2))) this.inView = 6;
+    console.log($event.srcElement.scrollTop, '&&&', window.screen.height)
   }
 
 }

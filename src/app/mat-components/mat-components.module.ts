@@ -5,6 +5,7 @@ import {
   MatSelectModule, MatSnackBarModule, MatSortModule, MatTableModule, MatTabsModule, MatTooltipModule
 } from '@angular/material';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { ScrollDispatchModule } from '@angular/cdk/scrolling';
 
 @NgModule({
   exports: [
@@ -25,6 +26,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatSidenavModule,
     MatDialogModule,
     MatListModule,
+    ScrollDispatchModule
   ]
 })
 export class MatComponentsModule {

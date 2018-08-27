@@ -1,4 +1,4 @@
-<div class="team" fxLayout="row-wrap" fxLayoutAlign="space-around center">
+<div class="team" fxLayout="row-wrap" fxLayout.xs="column" fxLayoutAlign="space-around center">
   <div class="member" *ngFor="let member of team" fxLayout="column" fxLayoutAlign="space-around center">
     <div class="image"><img [src]="member.img" alt=""></div>
     <div class="name">{{member.name}}</div>

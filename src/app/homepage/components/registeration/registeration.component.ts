@@ -9,23 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterationComponent implements OnInit {
   registers = [
-    {id: 'somehting1', url: 'http://bestdelegate.com/wp-content/uploads/2010/10/Alone-at-the-Podium.jpg', name: 'Delegate', content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim placerat lorem vitae cursus. Vivamus est metus, elementum a laoreet nec, mattis ut massa. Nullam placerat elit in pretium malesuada. Aliquam lacinia mattis hendrerit. Duis ac nunc gravida, ornare tellus id, rhoncus risus. Aliquam erat volutpat. Nam a mauris ac justo pulvinar gravida. Donec ultricies neque ligula, sed tristique urna fermentum vel.
+    {id: 'delegate', url: 'http://bestdelegate.com/wp-content/uploads/2010/10/Alone-at-the-Podium.jpg', name: 'Delegate', content: `The delegates are there to represent the different countries in the committee, and the country’s views and opinions.The delegation, is during a conference required to have created a position paper before recapping your country’s stance in the issue and background info of the issue, later create a resolution in the conference and also speak in the third person.`},
 
-    Praesent pharetra laoreet nunc in sagittis. Donec nec molestie justo. Etiam quam orci, rutrum vel luctus nec, ornare sit amet enim. Morbi facilisis vulputate mi quis suscipit. Donec aliquam cursus diam sit amet venenatis. Aenean malesuada lorem non sem dapibus, nec malesuada ligula fermentum. Mauris interdum eros ut egestas rutrum. Suspendisse laoreet porttitor pulvinar. Fusce tempus ante magna, eget hendrerit quam gravida in. Sed iaculis leo at sapien vulputate suscipit. Cras sed ante eu sem fermentum fringilla. Maecenas tristique laoreet porttitor. Fusce sodales eros id neque rutrum fringilla.`},
-    {id: 'somehting2', url: 'http://bestdelegate.com/wp-content/uploads/2013/02/843982_10151730828044741_467507316_o.jpg', name: 'Something2', content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim placerat lorem vitae cursus. Vivamus est metus, elementum a laoreet nec, mattis ut massa. Nullam placerat elit in pretium malesuada. Aliquam lacinia mattis hendrerit. Duis ac nunc gravida, ornare tellus id, rhoncus risus. Aliquam erat volutpat. Nam a mauris ac justo pulvinar gravida. Donec ultricies neque ligula, sed tristique urna fermentum vel.
-
-    Praesent pharetra laoreet nunc in sagittis. Donec nec molestie justo. Etiam quam orci, rutrum vel luctus nec, ornare sit amet enim. Morbi facilisis vulputate mi quis suscipit. Donec aliquam cursus diam sit amet venenatis. Aenean malesuada lorem non sem dapibus, nec malesuada ligula fermentum. Mauris interdum eros ut egestas rutrum. Suspendisse laoreet porttitor pulvinar. Fusce tempus ante magna, eget hendrerit quam gravida in. Sed iaculis leo at sapien vulputate suscipit. Cras sed ante eu sem fermentum fringilla. Maecenas tristique laoreet porttitor. Fusce sodales eros id neque rutrum fringilla.`},
-    {id: 'somehting3', url: 'http://leaderxpress.com/blog/wp-content/uploads/2015/10/Delegating-at-work.jpeg', name: 'Something3', content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim placerat lorem vitae cursus. Vivamus est metus, elementum a laoreet nec, mattis ut massa. Nullam placerat elit in pretium malesuada. Aliquam lacinia mattis hendrerit. Duis ac nunc gravida, ornare tellus id, rhoncus risus. Aliquam erat volutpat. Nam a mauris ac justo pulvinar gravida. Donec ultricies neque ligula, sed tristique urna fermentum vel.
-
-    Praesent pharetra laoreet nunc in sagittis. Donec nec molestie justo. Etiam quam orci, rutrum vel luctus nec, ornare sit amet enim. Morbi facilisis vulputate mi quis suscipit. Donec aliquam cursus diam sit amet venenatis. Aenean malesuada lorem non sem dapibus, nec malesuada ligula fermentum. Mauris interdum eros ut egestas rutrum. Suspendisse laoreet porttitor pulvinar. Fusce tempus ante magna, eget hendrerit quam gravida in. Sed iaculis leo at sapien vulputate suscipit. Cras sed ante eu sem fermentum fringilla. Maecenas tristique laoreet porttitor. Fusce sodales eros id neque rutrum fringilla.`},
     
+    
+    {id: 'executive_board_bmember', url: 'http://bestdelegate.com/wp-content/uploads/2013/02/843982_10151730828044741_467507316_o.jpg', name: 'Executive Board member', content: `The Executive Board of an MUN is comprised of individuals who have been selected after an extensive process of judging their merit and skills, verifying their experience, calculating the dynamics of the entire board with the requirements of the secretariat, only because they are going to be entrusted with one of the biggest tasks in making an MUN Conference successful – to guide their respective councils through debate on the agenda and throughout the debate, to judge the delegates who put in a tremendous effort to rise above the rest in all aspects of being a Delegate.`},
+
+    
+    {id: 'international_press', url: 'http://leaderxpress.com/blog/wp-content/uploads/2015/10/Delegating-at-work.jpeg', name: 'International Press', content: `The job of the international press journalists is to act as unbiased journalists and present the happenings of the UN to the world. You will have to investigate and follow committee debates, edit articles and cover the committees events. As a journalist you are expected to be quirky, sharp and sly. You’re meant to listen to the delegates debating and are allowed to ask questions. The questions put up by the journalists are normally sharp ripping half baked arguments into shreds.`},    
   ]
 
   constructor(public dialog: MatDialog) {}
 
   openDialog(committee: any) {
     let dialogRef = this.dialog.open(RegisterDialogComponent, {
-      height: '80vh',
       data: committee,
     });
     // console.log(committee)

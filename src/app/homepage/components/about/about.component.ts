@@ -18,7 +18,6 @@ export class AboutComponent implements OnInit {
 
   openDialogAntaragni() {
     let dialogRef = this.dialog.open(AntaragniComponent, {
-      height: '80vh',
     });
   }
 
