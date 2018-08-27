@@ -1,14 +1,14 @@
-<div class="home" fxLayout="column" fxLayoutAlign="center center">
-  <div class="content" fxLayout="row">
-    <div class="left-content col-12 col-md-6">
+<div class="home" [ngsReveal]="{ reset: true, cleanUp: true, scale: 1, viewOffset:{bottom: 30}, origin: 'bottom'}" fxLayout="column" fxLayoutAlign="center center">
+  <img src="https://lh5.googleusercontent.com/nDq5Ili1eq-YvOYq4MaFpGwepLDoJNHSMjbQWvEDZ1cEDYgrnXt-ZjjR1NQFSFTfvfybL7gKTiRoJGf8Ay4x=w1920-h957-rw" alt="" class="heading">
+  <div class="content" fxLayout="row" fxLayoutGap="10vw">
+    <div class="left-content">
       <div class="text">
-        <div class="heading">Heading</div>
-        <div class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim placerat lorem vitae cursus.</div>
+        <div class="intro"[ngsReveal]="{delay:100}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim placerat lorem vitae cursus.</div>
       </div>
-      <div class="btn" href="">A Link?</div>
+      <div class="btn" href="" [ngsReveal]="{delay:200}">A Link?</div>
     </div>
-    <div class="right-content col-12 col-md-6" fxLayout="row" fxLayoutAlign="center center">
-      <img class="logo" src="https://outreach.un.org/mun/sites/outreach.un.org/files/mun_legacy/2016/03/UN-emblem.jpg" alt="">
+    <div class="right-content" fxLayout="row" fxLayoutAlign="center center" [ngsReveal]="{scale: 1.2, viewOffset:{bottom: 0}}">
+      <img class="logo" src="https://lh4.googleusercontent.com/lpHkxIcuqwgvuO8EbbDRO_P-Zou022usn47OSBNiGhZSn489gEPK7PCN6c1a7u7bHMSwu7KIBsdoq-V4kNac=w1920-h957" alt="">
     </div>
   </div>
 </div>

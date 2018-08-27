@@ -20,6 +20,11 @@
     transition: .5s;
 }
 
+.selected{
+    color: white;
+
+}
+
 .navigation:hover{
     color: white;
 }

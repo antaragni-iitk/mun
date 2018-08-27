@@ -9,19 +9,18 @@ import {map, tap} from 'rxjs/internal/operators';
   styleUrls: ['./faq.component.css']
 })
 export class FaqComponent implements OnInit {
-  @ViewChild('faq') faq: ElementRef;
-  data;
-  len: number;
+  faq = [
+    {question: 'Q. What is Model United Nations?', answer: 'Model United Nations (also Model UN or MUN) is an academic simulation of the United Nations that aims to educate and encourage participants to discuss about major issues concerning the world, topics in international relations, diplomacy and the United Nations agenda.'},
+    {question: 'Q. What are the dates of Techfest World MUN?', answer: 'IITK MUN, is a three day conference and will be held from 5th-7th October 2018'},
+    {question: '', answer: ''},
+    {question: '', answer: ''},
+    {question: '', answer: ''},
+    {question: '', answer: ''},
+  ]
 
-  constructor(private ui: UiService, private ares: ContentService) {
+  constructor(private ares: ContentService) {
   }
 
   ngOnInit() {
-    this.data = this.ares.getArray('ca_faq').pipe(
-      tap((val: {data: any}) => this.len = val.data.length),
-      map((res) => Object.keys(res.data).map(val => res.data[val]))
-    )
-    ;
-    this.ui.goFaq.subscribe(() => this.faq.nativeElement.scrollIntoView({behavior: 'smooth', block: 'center'}));
   }
 }

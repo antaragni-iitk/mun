@@ -48,3 +48,11 @@
 .mat-dialog-actions{
   padding-bottom: none
 }
+
+.mat-raised-button.mat-warn {
+  background-color: rgb(161, 32, 65);
+}
+
+button{
+  outline: none !important;
+}

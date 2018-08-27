@@ -16,9 +16,9 @@
 	line-height: 1.75;
 	color: white;
 	opacity: 0.9;
-    width: 55vw;
     text-align: center;
-    padding: 1rem;
+	padding: 1rem;
+	min-height: 50vh;
 
 }
 

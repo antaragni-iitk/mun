@@ -1,5 +1,5 @@
 import { Link } from './../../../dashboard/models/link';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-sidenav',
@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidenav.component.css']
 })
 export class SidenavComponent implements OnInit {
+  mobile: boolean = window.screen.width < 1024;
+
   links: Link[] = [
     {name: 'Home', id: 'home', class: 'fa fa-home'},
     {name: 'About', id: 'about', class: 'fa fa-home'},
@@ -17,7 +19,33 @@ export class SidenavComponent implements OnInit {
     {name: 'FAQ', id: 'faq', class: 'fa fa-home'},
     {name: 'Contact Us', id: 'contact', class: 'fa fa-home'},
   ];
-  constructor() { }
+  @ViewChild('resources') resources;
+  @ViewChild('about') about;
+  @ViewChild('home') home;
+  @ViewChild('registeration') registeration;
+  @ViewChild('committees') committees;
+  @ViewChild('contact') contact;
+  @ViewChild('faq') faq;
+  
+  
+  constructor() { 
+  }
+  scrollto(i: number){
+    if(i == 0)
+      this.home.nativeElement.scrollIntoView({behavior: "smooth"});
+    if(i == 1)
+      this.about.nativeElement.scrollIntoView({behavior: "smooth"});
+    if(i == 2)
+      this.committees.nativeElement.scrollIntoView({behavior: "smooth", block: "start"});
+    if(i == 3)
+      this.resources.nativeElement.scrollIntoView({behavior: "smooth"});
+    if(i == 4)
+      this.registeration.nativeElement.scrollIntoView({behavior: "smooth"});
+    if(i == 5)
+      this.faq.nativeElement.scrollIntoView({behavior: "smooth"});
+    if(i == 6)
+      this.contact.nativeElement.scrollIntoView({behavior: "smooth"});
+  }
 
   ngOnInit() {
   }

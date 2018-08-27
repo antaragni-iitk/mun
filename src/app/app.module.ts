@@ -1,6 +1,5 @@
 import { LetterComponent } from './homepage/components/about/letter/letter.component';
 import { HomeComponent } from './homepage/components/home/home.component';
-import { SocialLinksComponent } from './homepage/components/social-links/social-links.component';
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -10,7 +9,6 @@ import { ParticlesModule } from 'angular-particle';
 
 import {AppComponent} from './app-component/app.component';
 import {BannerComponent} from './homepage/components/banner/banner.component';
-import {HeaderComponent} from './homepage/components/header/header.component';
 import {ContactComponent} from './homepage/components/contact/contact.component';
 import {AboutComponent} from './homepage/components/about/about.component';
 import {NavbarComponent} from './navbar/navbar.component';
@@ -53,7 +51,6 @@ import { RegisterDialogComponent } from './homepage/components/registeration/reg
   declarations: [
     AppComponent,
     BannerComponent,
-    HeaderComponent,
     ContactComponent,
     AboutComponent,
     NavbarComponent,
@@ -67,7 +64,6 @@ import { RegisterDialogComponent } from './homepage/components/registeration/reg
     AntaragniFeedComponent,
     FaqComponent,
     FooterComponent,
-    SocialLinksComponent,
     SponsorsComponent,
     DialogMessageComponent,
     SidenavComponent,

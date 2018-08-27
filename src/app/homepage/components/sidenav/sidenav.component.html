@@ -3,19 +3,32 @@
     <mat-sidenav #sidenav class="_side" mode="side" opened fixedInViewport="true" fixedTopGap="0" fixedBottomGap="0"  fxLayout="column" fxLayoutAlign="center">
       <mat-nav-list class="_list">
         <div mat-list-item class="navigation" role="navigation"
-        *ngFor="let link of links"
+        *ngFor="let link of links; let i=index" (click)="scrollto(i)" [class.selected]="selectedLink === link.id"
+        (click)="selectedLink = link.id" fxLayout="row"
         >
         <i [class]="link.class"></i>
-         {{link.name}}
+        <div *ngIf="!mobile">{{link.name}}</div>
       </div>
       </mat-nav-list>
     </mat-sidenav>
-    <app-home></app-home>
-    <app-about></app-about>
-    <app-committees></app-committees>
-    <app-resources></app-resources>
-    <app-registeration></app-registeration>
-    <!-- <app-faq></app-faq> -->
-    <app-contact></app-contact>
+    <div #home>
+      <app-home></app-home>
+    </div>
+    <div #about>
+      <app-about #about></app-about>
+    </div>
+    <div #committees>
+      <app-committees></app-committees>
+    </div>
+    <div #resources>
+      <app-resources></app-resources>
+    </div>
+    <div #registeration>
+      <app-registeration></app-registeration>
+    </div>
+    <!-- <app-faq #faq></app-faq> -->
+    <div #contact>
+      <app-contact></app-contact>
+    </div>
   </mat-sidenav-container>
 </div>

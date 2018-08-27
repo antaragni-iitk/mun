@@ -1,8 +1,9 @@
 <div class="registeration" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="50px">
+  <div class="heading">Registeration</div>
   <div class="content">
     You can register as a
   </div>
-  <div class="registers" fxLayout="row" fxLayoutAlign="center" fxLayoutGap="30px">
+  <div class="registers" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="30px">
     <div class="register" *ngFor="let register of registers" (click)="openDialog(register)" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="0px">
       <div class="image">
         <img [src]="register.url" alt="">

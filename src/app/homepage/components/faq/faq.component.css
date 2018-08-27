@@ -1,5 +1,5 @@
 .faq{
-  height: 100vh;
+  min-height: 100vh;
   margin-right: 19vw;
 }
 
@@ -29,4 +29,10 @@
 
 .answer{
 	opacity: 0.75;
+}
+
+@media(max-width: 1023px) {
+	.faq{
+		margin-right: 10px;
+	}
 }

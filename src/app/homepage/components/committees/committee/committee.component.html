@@ -1,6 +1,8 @@
 <div class="committee" fxLayout="column" fxLayoutAlign="center center">
   <div class="heading" mat-dialog-title>{{data.name}}</div>
-  <div class="content" mat-dialog-content fxFlexAlign="stretch">{{data.content}}</div>
+  <div class="content" mat-dialog-content fxFlexAlign="stretch">
+    <p *ngFor="let para of data.content">{{para}}</p>
+  </div>
 </div>
 
 <mat-dialog-actions class="_close" align="end" fxlayout="row" fxLayoutAlign="end">

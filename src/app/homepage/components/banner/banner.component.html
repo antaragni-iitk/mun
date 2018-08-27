@@ -1,43 +1,11 @@
-<!-- <div class="soc-links" fxLayoutAlign.xs="center center" fxLayoutAlign="end end">
-  <app-social-links></app-social-links>
-</div>
-<div class="banner">
-  <div fxLayout="row wrap" fxLayoutAlign="start center" class="login_container" fxLayout.xs="column" fxLayoutAlign.xs="center center">
-    <h1>Login with facebook</h1>
-    <div class="login" (click)="onhit()">
-      <i class="fab fa-facebook-f"></i>
-      <span> facebook login</span>
-    </div>
-  </div>
-
-  <div fxLayout="row wrap" fxLayoutAlign="center start" fxLayout.xs="column">
-    <div *ngFor="let dat of data; let i=index" fxLayout="row-wrap" fxLayoutAlign="center start" fxLayoutAlign.md="start center" class="dash"
-         fxLayoutGap="10px">
-      <div class="index">0{{i+1}}.</div>
-      <div fxLayout="column" class="content">
-        <div class="title">{{dat.title}}</div>
-        <div>{{dat.desc}}</div>
-      </div>
-    </div>
-  </div>
-
-</div> -->
-
 <div class="_navbar" fxLayout="row" fxLayoutAlign="space-between center">
   <div class="logo" fxLayout="row" fxLayoutAlign="none center">
     <div class="image">
-      <img src="https://outreach.un.org/mun/sites/outreach.un.org/files/mun_legacy/2016/03/UN-emblem.jpg" alt="">
+      <img src="https://lh5.googleusercontent.com/0Eyimybo-orgj0PjTHhNIUWV9QZ-elaJXcjz1Mt2HQEpSPobRKKhmB6pCOKDyAOCru8hAUnQXG4-rdzYqp6L=w1920-h957" alt="">
     </div>
     <div class="text">Antaragni</div>
   </div>
   <div class="_links" fxLayout="row" fxLayoutGap="30px">
-    <div class="btn" href="">A Link?</div>
-    <!-- <span class="menu">
-      <span class="bars" fxLayout="column" fxLayoutAlign="space-around start">
-        <span class="bar1"></span>
-        <span class="bar2"></span>
-        <span class="bar3"></span>
-      </span>
-    </span> -->
+    <div class="btn" (click)="onhit()"><i class="fab fa-facebook-f"></i>Log In</div>
   </div>
 </div>

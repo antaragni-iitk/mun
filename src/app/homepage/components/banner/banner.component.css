@@ -40,6 +40,10 @@
   cursor: pointer;
 }
 
+i{
+  padding-right: 8px;
+}
+
 .menu:hover{
   opacity: 1;
 }
@@ -79,4 +83,13 @@ img{
 
 .bar3{
   width: 12px;
+}
+
+@media(max-width: 1023px) {
+  ._links{
+    padding-right: 20px;
+  }
+  .logo{
+    padding-left: 20px;
+  }
 }

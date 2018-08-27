@@ -1,9 +1,9 @@
 <div class="about" fxLayout="column" fxLayoutAlign="center center">
-  <div class="heading">About MUN</div>
-  <div class="body" fxLayout="column" FxLayoutAlign="center center">
+  <div class="heading" fxFlexLayout.xs="center">About MUN</div>
+  <div class="body" fxLayout="column" fxLayoutAlign="center center" fxLayoutAlign.xs="stretch stretch">
       <p>Model United Nations, also known as Model UN or MUN, is an extracurricular activity in which students typically roleplay delegates to the United Nations and simulate UN committees. This activity takes place at MUN conferences, which is usually organized by a high school or college MUN club. At the end of most conferences, outstanding delegates in each committee are recognized and given an award certificate; the Best Delegate in each committee, however, receives a gavel.</p>
   </div>
-  <div class="_buttons" fxLayout="row" fxlayoutAlign="center" fxLayoutGap="50px">
+  <div class="_buttons" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center"  fxLayoutGap="50px" fxLayoutGap.xs="20px">
     <div class="btn" (click)="openDialogAntaragni()">Antaragni</div>
     <div class="btn" (click)="openDialogLetter()">Welcome Letter</div>
   </div>
