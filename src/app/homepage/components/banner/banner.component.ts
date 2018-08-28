@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FbloginService} from '../../../services/fblogin.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-banner',
@@ -8,7 +9,7 @@ import {FbloginService} from '../../../services/fblogin.service';
 })
 export class BannerComponent implements OnInit {
 
-  constructor(private loginService: FbloginService) {
+  constructor(public loginService: FbloginService, private router: Router) {
   }
 
   ngOnInit() {
@@ -16,6 +17,6 @@ export class BannerComponent implements OnInit {
   }
 
   onhit() {
-    this.loginService.signin();
+    this.loginService.isAuthenticated$.subscribe(res => res ? this.router.navigateByUrl('/dashboard') : this.loginService.signin());
   }
 }
