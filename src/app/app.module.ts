@@ -13,8 +13,6 @@ import {ContactComponent} from './homepage/components/contact/contact.component'
 import {AboutComponent} from './homepage/components/about/about.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
-import {LeaderboardComponent} from './dashboard/components/leaderboard/leaderboard.component';
-import {IdeasComponent} from './dashboard/components/ideas/ideas.component';
 import {AppRoutingModule} from './app-routing.module';
 import {LandingComponent} from './homepage/components/landing/landing.component';
 import {UiService} from './services/ui.service';
@@ -51,13 +49,10 @@ import { RegisterDialogComponent } from './homepage/components/registeration/reg
   declarations: [
     AppComponent,
     BannerComponent,
-    ContactComponent,
     AboutComponent,
     NavbarComponent,
     DashboardComponent,
     HomeComponent,
-    LeaderboardComponent,
-    IdeasComponent,
     LandingComponent,
     RegisterComponent,
     AnalyticsDirective,
@@ -75,6 +70,7 @@ import { RegisterDialogComponent } from './homepage/components/registeration/reg
     CommitteeComponent,
     AntaragniComponent,
     LetterComponent,
+    ContactComponent,
     RegisterDialogComponent,
   ],
   imports: [

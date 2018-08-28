@@ -55,10 +55,10 @@ export class SidenavComponent implements OnInit {
     if($event.srcElement.scrollTop <= window.screen.height/2) this.inView = 0;
     if(($event.srcElement.scrollTop <= (window.screen.height*3/2)) && ($event.srcElement.scrollTop > (window.screen.height/2))) this.inView = 1;
     if(($event.srcElement.scrollTop <= (window.screen.height*7/2)) && ($event.srcElement.scrollTop > (window.screen.height*3/2))) this.inView = 2;
-    if(($event.srcElement.scrollTop <= (window.screen.height*9/2)) && ($event.srcElement.scrollTop > (window.screen.height*7/2))) this.inView = 3;
-    if(($event.srcElement.scrollTop <= (window.screen.height*11/2)) && ($event.srcElement.scrollTop > (window.screen.height*17/4))) this.inView = 4;
-    if(($event.srcElement.scrollTop <= (window.screen.height*13/2)) && ($event.srcElement.scrollTop > (window.screen.height*11/2))) this.inView = 5;
-    if(($event.srcElement.scrollTop > (window.screen.height*13/2))) this.inView = 6;
+    if(($event.srcElement.scrollTop <= (window.screen.height*17/4)) && ($event.srcElement.scrollTop > (window.screen.height*7/2))) this.inView = 3;
+    if(($event.srcElement.scrollTop <= (window.screen.height*21/4)) && ($event.srcElement.scrollTop > (window.screen.height*17/4))) this.inView = 4;
+    if(($event.srcElement.scrollTop <= (window.screen.height*6)) && ($event.srcElement.scrollTop > (window.screen.height*21/4))) this.inView = 5;
+    if(($event.srcElement.scrollTop > (window.screen.height*6))) this.inView = 6;
     console.log($event.srcElement.scrollTop, '&&&', window.screen.height)
   }
 

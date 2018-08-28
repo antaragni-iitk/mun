@@ -7,7 +7,7 @@
         fxLayout="row"
         >
         <i [class]="link.class"></i>
-        <div *ngIf="!mobile">{{link.name}} {{i}}</div>
+        <div *ngIf="!mobile">{{link.name}}</div>
       </div>
       </mat-nav-list>
     </mat-sidenav>
@@ -27,7 +27,9 @@
       <div #registeration>
         <app-registeration></app-registeration>
       </div>
-      <!-- <app-faq #faq></app-faq> -->
+      <div #faq>
+        <app-faq></app-faq>
+      </div>
       <div #contact>
         <app-contact></app-contact>
       </div>

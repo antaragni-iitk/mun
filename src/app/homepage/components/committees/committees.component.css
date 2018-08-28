@@ -24,7 +24,7 @@
 img{
     width: 18vw;
     height: 10vw;
-    min-width: 180px;
+    min-width: 180px;   
     transition: 2s;
 }
 
@@ -76,8 +76,9 @@ img{
 }
 
 .fa{
-    font-size: 40px;
+    font-size: 54px;
     color: #fff;
+    margin-top: 1em;
 }
 
 @media(max-width: 1023px) {
