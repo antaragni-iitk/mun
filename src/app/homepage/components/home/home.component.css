@@ -61,9 +61,15 @@ img{
 @media(max-width: 1023px) {
 	.home{
         margin-left: 10px;
-		margin-right: 10px;
+        margin-right: 10px;
+        padding-right: unset;
     }
     .heading{
-        font-size: 3rem
+        width: 76vw;
+        height: 3rem;
+    }
+    img{
+        height: 50vw;
+        width: 50vw;
     }
 }

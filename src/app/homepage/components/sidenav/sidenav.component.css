@@ -35,6 +35,8 @@ i{
     border-radius: 50%;
     transition: .5s;
     background-color: rgba(44,48,63,0.89);
+    width: 2rem;
+    text-align: center;
 }
 
 .navigation:hover i{
@@ -46,4 +48,16 @@ i{
     /* background: -webkit-gradient(linear, right top, left top, from(#D1335B), to(#00152e)); */
     /* background: linear-gradient(to left, #D1335B, #00152e); */
     background: transparent;
+}
+
+@media(max-width: 1023px){
+    ._side{
+        width: max-content;
+    }
+    .navigation{
+        padding-left: 9px;
+    }
+    i{
+        width: 1.8rem;
+    }
 }

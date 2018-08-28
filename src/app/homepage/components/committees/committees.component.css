@@ -82,7 +82,7 @@ img{
 }
 
 @media(max-width: 1023px) {
-	.m-committees{
+	.mcommittees{
         margin-right: 10px;
         margin-left: 10px;
 
@@ -92,5 +92,16 @@ img{
     }
     .wrap{
         margin-top: 90px;
+    }
+    img{
+        height: 11vh;
+        width: 55vw;
+    }
+    .heading{
+        margin-top: 5px;
+    }
+    .btn{
+        font-size: 0.8rem;
+        padding: .624 1;
     }
 }

@@ -13,13 +13,13 @@ export class SidenavComponent implements OnInit {
 
   links = [
     {name: 'Home', id: 'home', class: 'fa fa-home'},
-    {name: 'About', id: 'about', class: 'fa fa-home'},
-    {name: 'Committees', id: 'committees', class: 'fa fa-home'},
-    {name: 'Resources', id: 'resources', class: 'fa fa-home'},
-    {name: 'Registeration', id: 'registeration', class: 'fa fa-home'},
+    {name: 'About', id: 'about', class: 'fas fa-info'},
+    {name: 'Committees', id: 'committees', class: 'fas fa-male'},
+    {name: 'Resources', id: 'resources', class: 'fas fa-bookmark'},
+    {name: 'Registeration', id: 'registeration', class: 'fas fa-book-open'},
     // {name: 'Ambassadors', id: 'ambassadors', class: 'fa fa-home'},
-    {name: 'FAQ', id: 'faq', class: 'fa fa-home'},
-    {name: 'Contact Us', id: 'contact', class: 'fa fa-home'},
+    {name: 'FAQ', id: 'faq', class: 'fas fa-question-circle'},
+    {name: 'Contact Us', id: 'contact', class: 'fas fa-phone'},
   ];
   @ViewChild('resources') resources;
   @ViewChild('about') about;
@@ -54,11 +54,11 @@ export class SidenavComponent implements OnInit {
   scrollSpy($event) {
     if($event.srcElement.scrollTop <= window.screen.height/2) this.inView = 0;
     if(($event.srcElement.scrollTop <= (window.screen.height*3/2)) && ($event.srcElement.scrollTop > (window.screen.height/2))) this.inView = 1;
-    if(($event.srcElement.scrollTop <= (window.screen.height*7/2)) && ($event.srcElement.scrollTop > (window.screen.height*3/2))) this.inView = 2;
-    if(($event.srcElement.scrollTop <= (window.screen.height*17/4)) && ($event.srcElement.scrollTop > (window.screen.height*7/2))) this.inView = 3;
-    if(($event.srcElement.scrollTop <= (window.screen.height*21/4)) && ($event.srcElement.scrollTop > (window.screen.height*17/4))) this.inView = 4;
-    if(($event.srcElement.scrollTop <= (window.screen.height*6)) && ($event.srcElement.scrollTop > (window.screen.height*21/4))) this.inView = 5;
-    if(($event.srcElement.scrollTop > (window.screen.height*6))) this.inView = 6;
+    if(($event.srcElement.scrollTop <= (window.screen.height*32/10)) && ($event.srcElement.scrollTop > (window.screen.height*3/2))) this.inView = 2;
+    if(($event.srcElement.scrollTop <= (window.screen.height*39/10)) && ($event.srcElement.scrollTop > (window.screen.height*32/10))) this.inView = 3;
+    if(($event.srcElement.scrollTop <= (window.screen.height*48/10)) && ($event.srcElement.scrollTop > (window.screen.height*39/10))) this.inView = 4;
+    if(($event.srcElement.scrollTop <= (window.screen.height*11/2)) && ($event.srcElement.scrollTop > (window.screen.height*48/10))) this.inView = 5;
+    if(($event.srcElement.scrollTop > (window.screen.height*11/2))) this.inView = 6;
     console.log($event.srcElement.scrollTop, '&&&', window.screen.height)
   }
 

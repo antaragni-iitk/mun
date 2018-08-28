@@ -90,6 +90,15 @@ img{
 		margin-right: 10px;
     }
     .heading{
-		font-size: 2rem;
+        font-size: 2rem;
+        margin-bottom: 2vh;
+    }
+    img{
+        width: 60vw;
+        height: 13vh;
+    }
+    .btn{
+        font-size: .9rem;
+        padding: 0.6rem 1 rem;
     }
 }
