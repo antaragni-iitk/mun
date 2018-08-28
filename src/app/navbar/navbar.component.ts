@@ -12,8 +12,6 @@ import {FbloginService} from '../services/fblogin.service';
 export class NavbarComponent {
   links = [
     {name: 'Home', id: 'home'},
-    {name: 'Leaderboard', id: 'leaderboard'},
-    {name: 'Ideas', id: 'ideas'},
   ];
 
   @Input() selectedLink: string = 'home';

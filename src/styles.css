@@ -53,6 +53,6 @@
   background-color: rgb(161, 32, 65);
 }
 
-button{
+button, .nav-item, a{
   outline: none !important;
 }

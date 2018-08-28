@@ -10,11 +10,27 @@
         </mat-error>
       </mat-form-field>
 
-      <mat-form-field>
-        <input required ngModel #email="ngModel" type="email" name="email" matInput placeholder="Email ID"
-               [(ngModel)]="newuser.email.value" [disabled]="newuser$.email.value">
-        <mat-error *ngIf="email.errors">valid email Required</mat-error>
-      </mat-form-field>
+      <table class="full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="point9-width">
+                <input required ngModel #email="ngModel" type="email" name="email" matInput placeholder="Email ID"
+                    [(ngModel)]="newuser.email.value">
+                <mat-error *ngIf="email.errors">valid email Required</mat-error>
+              </mat-form-field>
+            </td>
+            <td>
+         <mat-form-field class="full-width">
+          <mat-select #post="ngModel" name="post" placeholder="Register As"
+                      [(ngModel)]="newuser.registration.post">
+            <mat-option *ngFor="let post of registerAs" [value]="post.name">{{ post.name }}
+            </mat-option>
+          </mat-select>
+          <mat-error *ngIf="post.errors">Required</mat-error>
+        </mat-form-field>
+            </td>
+          </tr>
+        </table> 
 
       <mat-form-field>
         <textarea required ngModel #address="ngModel" name="address" matInput placeholder="Postal Address"

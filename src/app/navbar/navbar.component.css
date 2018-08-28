@@ -12,6 +12,14 @@ nav {
   opacity: 1;
 }
 
+.home{
+  cursor: pointer;
+  height: 100%;
+}
+.home:hover{
+  font-weight: 900;
+}
+
 i {
   margin: 0 15px;
   padding: 12px 10px 12px 14px;

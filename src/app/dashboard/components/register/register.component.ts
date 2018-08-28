@@ -26,6 +26,13 @@ export class RegisterComponent implements OnInit {
     {id: 4, name: '4th Year'},
     {id: 5, name: '5+ Year'}
   ];
+
+  registerAs = [
+    {id: 1, name: 'Delegate'},
+    {id: 2, name: 'Executive Board Member'},
+    {id: 3, name: 'International Press'},
+  ];
+
   newuser = new LocalUser();
   newuser$ = new LocalUser();
 

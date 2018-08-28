@@ -9,6 +9,7 @@ import {AuthGuard, guards, LocalUserGuard, LoggedInGuard, RegisteredGuard, Regis
 import {AntaragniFeedComponent} from './antaragni-feed';
 
 const routes: Routes = [
+  {path: 'register', component: RegisterComponent},
   {path: 'landing', component: LandingComponent},
   {path: '', redirectTo: 'landing', pathMatch: 'full'},
   {
