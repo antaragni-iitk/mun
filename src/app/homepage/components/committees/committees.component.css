@@ -85,7 +85,7 @@ img{
 	.mcommittees{
         margin-right: 10px;
         margin-left: 10px;
-
+        min-height: unset;
     }
     .m-heading{
 		font-size: 2rem;
@@ -94,7 +94,7 @@ img{
         margin-top: 90px;
     }
     img{
-        height: 11vh;
+        height: 30vw;
         width: 55vw;
     }
     .heading{

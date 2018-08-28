@@ -59,7 +59,6 @@ export class SidenavComponent implements OnInit {
     if(($event.srcElement.scrollTop <= (window.screen.height*48/10)) && ($event.srcElement.scrollTop > (window.screen.height*39/10))) this.inView = 4;
     if(($event.srcElement.scrollTop <= (window.screen.height*11/2)) && ($event.srcElement.scrollTop > (window.screen.height*48/10))) this.inView = 5;
     if(($event.srcElement.scrollTop > (window.screen.height*11/2))) this.inView = 6;
-    console.log($event.srcElement.scrollTop, '&&&', window.screen.height)
   }
 
 }

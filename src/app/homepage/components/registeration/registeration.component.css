@@ -87,7 +87,8 @@ img{
 @media(max-width: 1023px) {
 	.registeration{
         margin-left: 10px;
-		margin-right: 10px;
+        margin-right: 10px;
+        margin-bottom: 10rem;
     }
     .heading{
         font-size: 2rem;
@@ -95,10 +96,17 @@ img{
     }
     img{
         width: 60vw;
-        height: 13vh;
+        height: 60vw;
     }
     .btn{
-        font-size: .9rem;
-        padding: 0.6rem 1 rem;
+        min-height: 20px;
+        font-size: 1rem;
+        padding: 0.4rem .8rem;
+        margin: 1px 0;
+    }
+    .img_footer{
+        width: 60vw;
+        height: max-content;
+        line-height: 0.4;
     }
 }

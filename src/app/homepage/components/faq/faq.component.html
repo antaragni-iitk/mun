@@ -1,7 +1,7 @@
 <div class="faq" #faq fxLayout="column" fxLayoutAlign="center center">
   <div class="heading">FAQs</div>
     <div class="questions" fxLayout="column" fxLayoutGap="3vh">
-    <div class="questions1" *ngFor="let faq of faqs" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="1vh">
+    <div class="questions1" *ngFor="let faq of faqs" fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="1vh">
       <div class="question">{{faq.question}}</div>
       <div class="answer">{{faq.answer}}</div>
     </div>
