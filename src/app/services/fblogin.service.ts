@@ -12,7 +12,6 @@ import {ILocalUser, LocalUser} from '../models/localuser';
 import {UiService} from '@services/ui.service';
 import {auth} from 'firebase';
 import {FacebookService} from 'ngx-facebook';
-import {environment} from '@environments/environment';
 import {MatDialog} from '@angular/material';
 import {HttpClient} from '@angular/common/http';
 
@@ -44,22 +43,16 @@ export class FbloginService {
   };
 
   signin = () => {
+    this.dataFetched.pipe(distinctUntilChanged()).subscribe(
+      (val) => val ? this.zone.run(() => this.router.navigate(['/dashboard'])) : false
+    );
     const provider = new auth.FacebookAuthProvider();
     // provider.addScope('user_posts,user_link,user_birthday');
     return this.afAuth.auth.signInWithPopup(provider)
-      .catch(err => this.functions.handleError(err.message))
       .then((res: any) => {
-          this.setUser(res, res);
-          return res;
-        }
-      ).then(response =>
-        this.http.post('https://fb.antaragni.in/ragni/' + response.credential.accessToken, '').pipe(
-          catchError(err => this.functions.handleError('some error occurred'))
-        ).subscribe(
-          (res: { access_token: string }) => res.access_token ?
-            this.userRef(response.user.uid).update({'facebook.Token': res.access_token}) : null
-        )
-      )
+        this.setUser(res, res);
+        return res;
+      })
       .catch(err => {
         this.functions.handleError(err.message);
         if (err.message === 'FB is not defined') {
@@ -88,18 +81,8 @@ export class FbloginService {
           picture: res.additionalUserInfo.profile.picture.data.url,
           birthday: res.additionalUserInfo.profile.birthday ? res.additionalUserInfo.profile.birthday : ''
         },
-        campus: {
-          isAmbassador: true,
-          posts: [],
-          validPosts: [],
-          likes: 0,
-          shares: 0,
-          otherPoints: 0,
-          ideaPoints: 0,
-          totalPoints: 0,
-          isExclusive: false,
-          rank: false,
-          exclusiveApproved: false,
+        registration: {
+          post: ''
         }
       }as ILocalUser) : 200;
 
@@ -116,13 +99,6 @@ export class FbloginService {
               private fb: FacebookService,
               private dialogRef: MatDialog,
               private http: HttpClient) {
-    fb.init({
-      appId: environment.fbAppID,
-      version: 'v3.0'
-    });
-    this.dataFetched.pipe(distinctUntilChanged()).subscribe(
-      (val) => val ? this.zone.run(() => this.router.navigate(['/dashboard'])) : false
-    );
     this.init();
   }
 

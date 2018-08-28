@@ -14,22 +14,13 @@
           <div class="clg"><i class="fa fa-graduation-cap"></i> IIT Kanpur</div>
         </div>
       </mat-card>
-      <mat-card>
-        <mat-card-title class="sb">Scoreboard</mat-card-title>
-        <mat-card-content>
-          <div *ngFor="let point of pointkeys" fxLayout="row wrap" fxLayoutAlign="space-between center">
-            <div>{{point}}</div>
-            <div>: {{(user|async)?.campus[points[point]]}}</div>
-          </div>
-        </mat-card-content>
-      </mat-card>
-      <mat-card fxLayout="row" fxLayoutAlign="space-between center" class="ref" (click)="copyit()">
-        <div>Referral Code</div>
-        <div fxLayout="column" fxLayoutAlign="center end">
-          <input #refcode [value]="(user|async)?.campus.referralCode" maxlength="6">
-          <div class="copy">click to copy</div>
-        </div>
-      </mat-card>
+      <!--<mat-card fxLayout="row" fxLayoutAlign="space-between center" class="ref" (click)="copyit()">-->
+        <!--<div>Applied for</div>-->
+        <!--<div fxLayout="column" fxLayoutAlign="center end">-->
+          <!--<input #refcode [value]="(user|async)?.campus.referralCode" maxlength="6">-->
+          <!--<div class="copy">click to copy</div>-->
+        <!--</div>-->
+      <!--</mat-card>-->
     </div>
   </mat-drawer>
   <app-navbar [selectedLink]="(getState(o)|async)[0]?.path"></app-navbar>

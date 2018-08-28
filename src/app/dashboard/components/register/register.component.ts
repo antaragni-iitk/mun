@@ -38,19 +38,10 @@ export class RegisterComponent implements OnInit {
       this.newuser = user;
       this.newuser$ = JSON.parse(JSON.stringify(user));
     });
-    this.afs.doc('/config/counter').valueChanges().pipe(take(2)).subscribe((res: { data: number }) => {
-      const count = (res.data + 1000).toString();
-      this.count = res.data;
-      this.refCode = 'CA' + count[0] + count[3] + count[1] + count[2];
-    });
   }
 
   onSubmit() {
     this.newuser.firstUpdate = true;
-    if ((!this.newuser.campus.referralCode) || (this.newuser.campus.referralCode === '')) {
-      this.newuser.campus.referralCode = this.refCode;
-      this.afs.doc('/config/counter').set({data: this.count + 1});
-    }
     this.fblogin.updateRegistration(this.newuser);
   }
 }

@@ -5,6 +5,7 @@ export interface ILocalUser {
   facebook: Facebook;
   personal: Personal;
   campus: Campus;
+  registration: Registration;
 }
 
 export interface Facebook {
@@ -54,6 +55,7 @@ export interface Campus {
 
 export interface Registration {
   manifest: Array<number>;
+  post: string;
 }
 
 export interface Payment {

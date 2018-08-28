@@ -15,19 +15,11 @@ import {bounceOutLeft} from '../animations/bounceOutLeft';
 })
 export class DashboardComponent implements OnInit {
   state;
-  @ViewChild('refcode') ref: ElementRef;
+  // @ViewChild('refcode') ref: ElementRef;
   mobile = window.screen.width < 1023;
   user: Observable<LocalUser>;
   @ViewChild('drawer') drawer;
   showFiller = false;
-  points = {
-    'Idea Points': 'otherPoints',
-    'Likes': 'likes',
-    'Shares': 'shares',
-    'Other Points': 'ideaPoints',
-    'Total Points': 'totalPoints',
-  };
-  pointkeys = Object.keys(this.points);
 
   constructor(private ui: UiService, private fbloginservice: FbloginService) {
     this.user = this.fbloginservice.currentUser;
@@ -38,11 +30,11 @@ export class DashboardComponent implements OnInit {
     return outlet.activatedRoute.url;
   }
 
-  copyit() {
-    this.ref.nativeElement.select();
-    document.execCommand('copy');
-    this.ref.nativeElement.blur();
-  }
+  // copyit() {
+  //   this.ref.nativeElement.select();
+  //   document.execCommand('copy');
+  //   this.ref.nativeElement.blur();
+  // }
 
   ngOnInit() {
     this.ui.sidenav.subscribe(() => this.drawer.toggle());
