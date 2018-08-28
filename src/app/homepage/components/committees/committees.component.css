@@ -91,11 +91,12 @@ img{
 		font-size: 2rem;
     }
     .wrap{
+        padding-bottom: 15vh;
         margin-top: 90px;
     }
     img{
-        height: 30vw;
-        width: 55vw;
+        height: 39vw;
+        width: 70vw;
     }
     .heading{
         margin-top: 5px;
@@ -103,5 +104,8 @@ img{
     .btn{
         font-size: 0.8rem;
         padding: .624 1;
+    }
+    .second{
+        margin-top: 10px;
     }
 }

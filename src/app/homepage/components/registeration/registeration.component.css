@@ -89,6 +89,8 @@ img{
         margin-left: 10px;
         margin-right: 10px;
         margin-bottom: 10rem;
+        margin-top: 2vh;
+        padding-top: 15vh;
     }
     .heading{
         font-size: 2rem;
@@ -108,5 +110,8 @@ img{
         width: 60vw;
         height: max-content;
         line-height: 0.4;
+    }
+    .content{
+        margin-bottom: 10px;
     }
 }
