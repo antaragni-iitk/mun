@@ -1,7 +1,6 @@
 import {Component, Injectable, NgZone} from '@angular/core';
 import {Router} from '@angular/router';
 
-
 import {BehaviorSubject, Observable, of, Subject} from 'rxjs';
 import {AngularFirestore, AngularFirestoreDocument} from 'angularfire2/firestore';
 import {AngularFireAuth} from 'angularfire2/auth';
