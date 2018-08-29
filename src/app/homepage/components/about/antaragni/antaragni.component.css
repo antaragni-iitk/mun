@@ -22,6 +22,11 @@
 
 }
 
+.content a{
+	color: #fff;
+	opacity: 1.8;
+}
+
 ._close{
     color: white;
 }
