@@ -17,7 +17,7 @@ export class LetterComponent implements OnInit {
     '------------------------',
     'Secretary General',
     'IITK MUN 2018',
-  ]
+  ];
 
   constructor() { }
 

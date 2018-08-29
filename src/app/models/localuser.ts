@@ -69,6 +69,7 @@ export class LocalUser implements ILocalUser {
   name: string;
   uid: string;
   firstUpdate: boolean;
+  munUpdate: boolean;
   email: Email;
   facebook: Facebook;
   promocode: Promocode;

@@ -17,12 +17,12 @@ export class AboutComponent implements OnInit {
   constructor(private ui: UiService, private ares: ContentService, public dialog: MatDialog) {}
 
   openDialogAntaragni() {
-    let dialogRef = this.dialog.open(AntaragniComponent, {
+    const dialogRef = this.dialog.open(AntaragniComponent, {
     });
   }
 
   openDialogLetter() {
-    let dialogRef = this.dialog.open(LetterComponent, {
+    const dialogRef = this.dialog.open(LetterComponent, {
       height: '80vh',
     });
   }

@@ -6,7 +6,7 @@ import {AngularFirestore, AngularFirestoreDocument} from 'angularfire2/firestore
 import {AngularFireAuth} from 'angularfire2/auth';
 import {Funcs} from '../utility/function';
 import {catchError, switchMap} from 'rxjs/operators';
-import {distinctUntilChanged, map} from 'rxjs/internal/operators';
+import {distinctUntilChanged, map, tap} from 'rxjs/internal/operators';
 import {ILocalUser, LocalUser} from '../models/localuser';
 import {UiService} from '@services/ui.service';
 import {auth} from 'firebase';
@@ -29,7 +29,9 @@ export class FbloginService {
       map((res) => !!res)
     );
     this.$logged = this.afAuth.authState.pipe(
-      switchMap((user) => user ? this.userRef(user.uid).valueChanges() : of(null)),
+      switchMap((user: any) => {
+        return user ? this.userRef(user.uid).valueChanges() : of(null);
+      }),
       catchError(err => {
         this.functions.handleError(err.message);
         return of(null);
@@ -49,9 +51,6 @@ export class FbloginService {
     // provider.addScope('user_posts,user_link,user_birthday');
     return this.afAuth.auth.signInWithPopup(provider)
       .then((res: any) => {
-        if (!(res.registration ? res.registration.post : false)) {
-          this.userRef(res.user.uid).update({'registration.post': '', firstUpdate: false});
-        }
         this.setUser(res, res);
         return res;
       })
@@ -85,7 +84,7 @@ export class FbloginService {
         },
         registration: {
           post: ''
-        }
+        },
       }as ILocalUser) : 200;
 
 

@@ -49,6 +49,7 @@ export class RegisterComponent implements OnInit {
 
   onSubmit() {
     this.newuser.firstUpdate = true;
+    this.newuser.munUpdate = true;
     this.fblogin.updateRegistration(this.newuser);
   }
 }

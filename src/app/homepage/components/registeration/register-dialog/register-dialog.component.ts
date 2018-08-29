@@ -18,7 +18,7 @@ export class RegisterDialogComponent implements OnInit {
 
   ngOnInit() {
   }
-  closedialog(){
+  closedialog() {
     this.dialogRef.close();
   }
 

@@ -28,57 +28,63 @@ export class SidenavComponent implements OnInit {
   @ViewChild('committees') committees;
   @ViewChild('contact') contact;
   @ViewChild('faq') faq;
-  
-  
-  constructor() { 
+
+
+  constructor() {
   }
-  scrollto(i: number){
-    if(i == 0)
-      this.home.nativeElement.scrollIntoView({behavior: "smooth"});
-    if(i == 1)
-      this.about.nativeElement.scrollIntoView({behavior: "smooth"});
-    if(i == 2)
-      this.committees.nativeElement.scrollIntoView({behavior: "smooth", block: "start"});
-    if(i == 3)
-      this.resources.nativeElement.scrollIntoView({behavior: "smooth"});
-    if(i == 4) {
-      if(this.mobile)
-        this.registeration.nativeElement.scrollIntoView({behavior: "smooth", block: "start"});
-      else
-        this.registeration.nativeElement.scrollIntoView({behavior: "smooth"});
+  scrollto(i: number) {
+    if (i == 0) {
+      this.home.nativeElement.scrollIntoView({behavior: 'smooth'});
     }
-    if(i == 5) {
-      if(this.mobile)
-        this.faq.nativeElement.scrollIntoView({behavior: "smooth", block: "start"});
-      else
-        this.faq.nativeElement.scrollIntoView({behavior: "smooth"});
+    if (i == 1) {
+      this.about.nativeElement.scrollIntoView({behavior: 'smooth'});
     }
-    if(i == 6) {
-      if(this.mobile)
-        this.contact.nativeElement.scrollIntoView({behavior: "smooth", block: "start"});
-      else
-        this.contact.nativeElement.scrollIntoView({behavior: "smooth"});
+    if (i == 2) {
+      this.committees.nativeElement.scrollIntoView({behavior: 'smooth', block: 'start'});
+    }
+    if (i == 3) {
+      this.resources.nativeElement.scrollIntoView({behavior: 'smooth'});
+    }
+    if (i == 4) {
+      if (this.mobile) {
+        this.registeration.nativeElement.scrollIntoView({behavior: 'smooth', block: 'start'});
+      } else {
+        this.registeration.nativeElement.scrollIntoView({behavior: 'smooth'});
+      }
+    }
+    if (i == 5) {
+      if (this.mobile) {
+        this.faq.nativeElement.scrollIntoView({behavior: 'smooth', block: 'start'});
+      } else {
+        this.faq.nativeElement.scrollIntoView({behavior: 'smooth'});
+      }
+    }
+    if (i == 6) {
+      if (this.mobile) {
+        this.contact.nativeElement.scrollIntoView({behavior: 'smooth', block: 'start'});
+      } else {
+        this.contact.nativeElement.scrollIntoView({behavior: 'smooth'});
+      }
     }
   }
 
   ngOnInit() {
   }
   scrollSpy($event) {
-    if($event.srcElement.scrollTop <= window.screen.height/2) this.inView = 0;
-    if(($event.srcElement.scrollTop <= (window.screen.height*3/2)) && ($event.srcElement.scrollTop > (window.screen.height/2))) this.inView = 1;
-    if(this.mobile){
-      if(($event.srcElement.scrollTop <= (window.screen.height*38/10)) && ($event.srcElement.scrollTop > (window.screen.height*3/2))) this.inView = 2;
-      if(($event.srcElement.scrollTop <= (window.screen.height*47/10)) && ($event.srcElement.scrollTop > (window.screen.height*38/10))) this.inView = 3;
-      if(($event.srcElement.scrollTop <= (window.screen.height*62/10)) && ($event.srcElement.scrollTop > (window.screen.height*47/10))) this.inView = 4;
-      if(($event.srcElement.scrollTop <= (window.screen.height*74/10)) && ($event.srcElement.scrollTop > (window.screen.height*62/10))) this.inView = 5;
-      if(($event.srcElement.scrollTop > (window.screen.height*74/10))) this.inView = 6;
-    }
-    else{
-      if(($event.srcElement.scrollTop <= (window.screen.height*32/10)) && ($event.srcElement.scrollTop > (window.screen.height*3/2))) this.inView = 2;
-      if(($event.srcElement.scrollTop <= (window.screen.height*39/10)) && ($event.srcElement.scrollTop > (window.screen.height*32/10))) this.inView = 3;
-      if(($event.srcElement.scrollTop <= (window.screen.height*48/10)) && ($event.srcElement.scrollTop > (window.screen.height*39/10))) this.inView = 4;
-      if(($event.srcElement.scrollTop <= (window.screen.height*11/2)) && ($event.srcElement.scrollTop > (window.screen.height*48/10))) this.inView = 5;
-      if(($event.srcElement.scrollTop > (window.screen.height*11/2))) this.inView = 6;
+    if ($event.srcElement.scrollTop <= window.screen.height / 2) { this.inView = 0; }
+    if (($event.srcElement.scrollTop <= (window.screen.height * 3 / 2)) && ($event.srcElement.scrollTop > (window.screen.height / 2))) { this.inView = 1; }
+    if (this.mobile) {
+      if (($event.srcElement.scrollTop <= (window.screen.height * 38 / 10)) && ($event.srcElement.scrollTop > (window.screen.height * 3 / 2))) { this.inView = 2; }
+      if (($event.srcElement.scrollTop <= (window.screen.height * 47 / 10)) && ($event.srcElement.scrollTop > (window.screen.height * 38 / 10))) { this.inView = 3; }
+      if (($event.srcElement.scrollTop <= (window.screen.height * 62 / 10)) && ($event.srcElement.scrollTop > (window.screen.height * 47 / 10))) { this.inView = 4; }
+      if (($event.srcElement.scrollTop <= (window.screen.height * 74 / 10)) && ($event.srcElement.scrollTop > (window.screen.height * 62 / 10))) { this.inView = 5; }
+      if (($event.srcElement.scrollTop > (window.screen.height * 74 / 10))) { this.inView = 6; }
+    } else {
+      if (($event.srcElement.scrollTop <= (window.screen.height * 32 / 10)) && ($event.srcElement.scrollTop > (window.screen.height * 3 / 2))) { this.inView = 2; }
+      if (($event.srcElement.scrollTop <= (window.screen.height * 39 / 10)) && ($event.srcElement.scrollTop > (window.screen.height * 32 / 10))) { this.inView = 3; }
+      if (($event.srcElement.scrollTop <= (window.screen.height * 48 / 10)) && ($event.srcElement.scrollTop > (window.screen.height * 39 / 10))) { this.inView = 4; }
+      if (($event.srcElement.scrollTop <= (window.screen.height * 11 / 2)) && ($event.srcElement.scrollTop > (window.screen.height * 48 / 10))) { this.inView = 5; }
+      if (($event.srcElement.scrollTop > (window.screen.height * 11 / 2))) { this.inView = 6; }
     }
   }
 }

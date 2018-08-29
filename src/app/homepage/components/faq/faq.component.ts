@@ -15,7 +15,7 @@ export class FaqComponent implements OnInit {
     {question: 'Q. Who can register for IITK MUN?', answer: 'All students with a valid ID card of their high school or college can register for IITK MUN.'},
     {question: 'Q. When will the registrations for delegates start?', answer: 'The registrations will be released very soon. Follow our Facebook page(Link this to our fb page) to stay updated!'},
     {question: 'Q. What awards will be provided at IITK MUN 2018?', answer: 'The awards will be presented at the discretion of the chairs of each committee and will include 1 Best Delegate and 1 Honorable Mentions/High Commendations. A Best Delegation award will also be provided, and 1 award to the best International Ambassador at the discretion of the Secretary General and the Organizing committee.'},
-  ]
+  ];
 
   len = this.faqs.length;
 
