@@ -49,6 +49,9 @@ export class FbloginService {
     // provider.addScope('user_posts,user_link,user_birthday');
     return this.afAuth.auth.signInWithPopup(provider)
       .then((res: any) => {
+        if (!(res.registration ? res.registration.post : false)) {
+          this.userRef(res.user.uid).update({'registration.post': '', firstUpdate: false});
+        }
         this.setUser(res, res);
         return res;
       })

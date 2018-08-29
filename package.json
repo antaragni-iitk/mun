@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build --aot --prod&&firebase deploy --project ca",
+    "deploy": "ng build --aot --prod&&firebase deploy",
     "precommit": "ng lint app2"
   },
   "private": true,

@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FbloginService} from '../../../services/fblogin.service';
 import {Router} from '@angular/router';
+import {first} from 'rxjs/internal/operators';
 
 @Component({
   selector: 'app-banner',
@@ -17,6 +18,6 @@ export class BannerComponent implements OnInit {
   }
 
   onhit() {
-    this.loginService.isAuthenticated$.subscribe(res => res ? this.loginService.signOut() : this.loginService.signin());
+    this.loginService.isAuthenticated$.pipe(first()).subscribe(res => res ? this.loginService.signOut() : this.loginService.signin());
   }
 }
