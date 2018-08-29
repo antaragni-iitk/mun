@@ -92,4 +92,11 @@ img{
   .logo{
     padding-left: 20px;
   }
+  ._navbar{
+    height: 8vh;
+    background-color: transparent;
+  }
+  .btn{
+    
+  }
 }
