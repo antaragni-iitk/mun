@@ -60,4 +60,7 @@ i{
     i{
         width: 1.8rem;
     }
+    .mat-sidenav-content{
+        margin-top: 8vh;
+    }
 }

@@ -18,6 +18,9 @@ export class RegisterDialogComponent implements OnInit {
 
   ngOnInit() {
   }
+  closedialog(){
+    this.dialogRef.close();
+  }
 
   onhit() {
     this.loginService.isAuthenticated$.subscribe(res => res ? this.router.navigateByUrl('/dashboard') : this.loginService.signin());

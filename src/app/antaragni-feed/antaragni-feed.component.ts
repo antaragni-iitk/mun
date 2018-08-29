@@ -32,5 +32,4 @@ export class AntaragniFeedComponent implements OnInit {
   sharePost(post) {
     this.feedService.sharePost(post.permalink_url, post.id);
   }
-
 }

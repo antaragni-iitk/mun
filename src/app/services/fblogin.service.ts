@@ -1,7 +1,6 @@
 import {Component, Injectable, NgZone} from '@angular/core';
 import {Router} from '@angular/router';
 
-
 import {BehaviorSubject, Observable, of, Subject} from 'rxjs';
 import {AngularFirestore, AngularFirestoreDocument} from 'angularfire2/firestore';
 import {AngularFireAuth} from 'angularfire2/auth';
@@ -104,7 +103,7 @@ export class FbloginService {
 
   updateRegistration(user: LocalUser) {
     this.updateUser(user)
-      .then(() => this.zone.run(() => this.router.navigate(['/dashboard/home'])))
+      .then(() => this.zone.run(() => this.router.navigate(['/'])))
       .catch((err) => this.functions.handleError(err));
   }
 
