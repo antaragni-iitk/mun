@@ -21,6 +21,10 @@
           <!--<div class="copy">click to copy</div>-->
         <!--</div>-->
       <!--</mat-card>-->
+      <mat-card fxLayout="row" fxLayoutAlign="left center" fxLayoutGap="15px">
+        <div class="heading">Registered As:</div>
+        <div class="registeredAs">{{(user | async)?.registration.post}}</div>
+      </mat-card>
     </div>
   </mat-drawer>
   <app-navbar [selectedLink]="(getState(o)|async)[0]?.path"></app-navbar>

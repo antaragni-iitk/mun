@@ -43,6 +43,7 @@ import { TestComponent } from './test/test.component';
 import { CommitteeComponent } from './homepage/components/committees/committee/committee.component';
 import { AntaragniComponent } from './homepage/components/about/antaragni/antaragni.component';
 import { RegisterDialogComponent } from './homepage/components/registeration/register-dialog/register-dialog.component';
+import { CollabComponent } from './homepage/components/collab/collab.component';
 
 
 @NgModule({
@@ -72,6 +73,7 @@ import { RegisterDialogComponent } from './homepage/components/registeration/reg
     LetterComponent,
     ContactComponent,
     RegisterDialogComponent,
+    CollabComponent,
   ],
   imports: [
     BrowserModule,
