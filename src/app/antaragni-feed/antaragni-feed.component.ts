@@ -26,7 +26,7 @@ export class AntaragniFeedComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.feeds = this.feedService.getAllPosts();
+    // this.feeds = this.feedService.getAllPosts();
   }
 
   sharePost(post) {

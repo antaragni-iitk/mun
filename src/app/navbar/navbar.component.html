@@ -6,14 +6,6 @@
     </div>
     <div fxFlex="grow" class="mobile"></div>
     <a mat-tab-link
-       *ngFor="let link of links"
-       [routerLink]="link.id"
-       [class.selected]="selectedLink === link.id"
-       (click)="selectedLink = link.name"
-       routerLinkActive #rla="routerLinkActive">
-      {{link.name}}
-    </a>
-    <a mat-tab-link
        (click)="logout()"
        routerLinkActive #rla="routerLinkActive">
       Logout
