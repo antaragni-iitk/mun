@@ -17,6 +17,6 @@ export class BannerComponent implements OnInit {
   }
 
   onhit() {
-    this.loginService.isAuthenticated$.subscribe(res => res ? this.router.navigateByUrl('/dashboard') : this.loginService.signin());
+    this.loginService.isAuthenticated$.subscribe(res => res ? this.loginService.signOut() : this.loginService.signin());
   }
 }

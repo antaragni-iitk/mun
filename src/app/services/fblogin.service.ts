@@ -104,7 +104,7 @@ export class FbloginService {
 
   updateRegistration(user: LocalUser) {
     this.updateUser(user)
-      .then(() => this.zone.run(() => this.router.navigate(['/dashboard/home'])))
+      .then(() => this.zone.run(() => this.router.navigate(['/'])))
       .catch((err) => this.functions.handleError(err));
   }
 
