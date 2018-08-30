@@ -21,7 +21,7 @@
             </td>
             <td>
          <mat-form-field class="full-width">
-          <mat-select #post="ngModel" name="post" placeholder="Register As"
+          <mat-select #post="ngModel" name="post" placeholder="Register As" required
                       [(ngModel)]="newuser.registration.post">
             <mat-option *ngFor="let post of registerAs" [value]="post.name">{{ post.name }}
             </mat-option>
@@ -30,7 +30,7 @@
         </mat-form-field>
             </td>
           </tr>
-        </table> 
+        </table>
 
       <mat-form-field>
         <textarea required ngModel #address="ngModel" name="address" matInput placeholder="Postal Address"
