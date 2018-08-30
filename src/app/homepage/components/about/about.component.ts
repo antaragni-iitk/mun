@@ -23,7 +23,6 @@ export class AboutComponent implements OnInit {
 
   openDialogLetter() {
     const dialogRef = this.dialog.open(LetterComponent, {
-      height: '80vh',
     });
   }
 
