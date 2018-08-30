@@ -1,8 +1,8 @@
 <div class="wrap">
   <div class="mcommittees" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="40px">
     <div class="m-heading" fxFlexlayout="center">Committees</div>
-    <div class="committees" fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="30px" fxLayout.xs="column" fxLayoutAlign.xs="center center" fxLayoutGap.xs="10px">
-      <div class="committee" *ngFor="let committee of committees.slice(0,3)">
+    <div class="committees" fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="50px" fxLayout.xs="column" fxLayoutAlign.xs="center center" fxLayoutGap.xs="10px">
+      <div class="committee" *ngFor="let committee of committees.slice(0,2)">
         <div class="image" (click)="openDialog(committee)"><img [src]="committee.img" alt=""></div>
         <div class="heading">{{committee.name}}</div>
         <div class="btn" (click)="openDialog(committee)">Learn More...</div>
@@ -10,8 +10,8 @@
     </div>
     <div class="home-down bounce active" *ngIf="!mobile" (click)="scrollDown()"><i class="fa fa-angle-down"></i></div>
   </div>
-  <div class="mcommittees second" #two fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="30px" fxLayout.xs="column" fxLayoutAlign.xs="center center" fxLayoutGap.xs="10px">
-    <div class="committee" *ngFor="let committee of committees.slice(3,6)">
+  <div class="mcommittees second" #two fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="50px" fxLayout.xs="column" fxLayoutAlign.xs="center center" fxLayoutGap.xs="10px">
+    <div class="committee" *ngFor="let committee of committees.slice(2,4)">
       <div class="image" (click)="openDialog(committee)"><img [src]="committee.img" alt=""></div>
       <div class="heading">{{committee.name}}</div>
       <div class="btn" (click)="openDialog(committee)">Learn More...</div>
