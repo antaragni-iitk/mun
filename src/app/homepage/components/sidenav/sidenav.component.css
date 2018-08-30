@@ -62,5 +62,6 @@ i{
     }
     .mat-sidenav-content{
         margin-top: 8vh;
+        padding-bottom: 8vh;
     }
 }

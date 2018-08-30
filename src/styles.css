@@ -56,3 +56,17 @@
 button, .nav-item, a{
   outline: none !important;
 }
+
+@media(max-width: 1023px){
+  .mat-dialog-container{
+    max-width: 100vw;
+    width: 100vw !important;
+  }
+  .cdk-overlay-pane{
+    width: 100vw !important;
+
+  }
+  .panelC{
+		width: 100vw !important;
+	}
+}

@@ -23,3 +23,9 @@
 ._close{
     color: white;
 }
+
+@media(max-width: 1023px) {
+	.heading{
+		font-size: 2rem;
+	}
+}

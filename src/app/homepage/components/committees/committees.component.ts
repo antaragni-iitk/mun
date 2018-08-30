@@ -43,6 +43,8 @@ export class CommitteesComponent implements OnInit {
   openDialog(committee: any) {
     let dialogRef = this.dialog.open(CommitteeComponent, {
       data: committee,
+      panelClass: 'panelC',
+      maxHeight: '100vh',
     });
     // console.log(committee)
 
