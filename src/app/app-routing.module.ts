@@ -10,7 +10,6 @@ import {AntaragniFeedComponent} from './antaragni-feed';
 
 const routes: Routes = [
   {path: 'landing', component: LandingComponent},
-  {path: 'blah', component: AntaragniFeedComponent},
   {path: '', redirectTo: 'landing', pathMatch: 'full'},
   {
     path: 'dashboard', component: DashboardComponent,
