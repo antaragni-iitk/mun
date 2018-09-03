@@ -64,25 +64,6 @@ export class RegisteredGuard implements CanActivate {
 }
 
 @Injectable()
-export class LoggedInGuard implements CanActivate {
-
-  constructor(private localUserService: FbloginService,
-              private router: Router) {
-  }
-
-  canActivate(): Observable<boolean> {
-    return this.localUserService.$logged.pipe(
-      map((result) => {
-        if (result) {
-          this.router.navigate(['/dashboard']);
-        }
-        return !result;
-      })
-    );
-  }
-}
-
-@Injectable()
 export class AuthGuard implements CanActivateChild {
   constructor(private authService: FbloginService, private router: Router) {
   }
@@ -91,6 +72,7 @@ export class AuthGuard implements CanActivateChild {
     return this.authService.currentUser.pipe(
       map((user) => {
         if (!user) {
+          console.log(user);
           this.router.navigate(['/']);
         }
         return !!user;

@@ -6,13 +6,12 @@ import {AngularFirestore, AngularFirestoreDocument} from 'angularfire2/firestore
 import {AngularFireAuth} from 'angularfire2/auth';
 import {Funcs} from '../utility/function';
 import {catchError, switchMap} from 'rxjs/operators';
-import {distinctUntilChanged, map, tap} from 'rxjs/internal/operators';
+import {distinctUntilChanged, map} from 'rxjs/internal/operators';
 import {ILocalUser, LocalUser} from '../models/localuser';
 import {UiService} from '@services/ui.service';
-import {auth} from 'firebase';
-import {FacebookService} from 'ngx-facebook';
 import {MatDialog} from '@angular/material';
-import {HttpClient} from '@angular/common/http';
+import * as firebase from 'firebase/app';
+import 'firebase/auth';
 
 @Injectable({
   providedIn: 'root'
@@ -30,7 +29,10 @@ export class FbloginService {
     );
     this.$logged = this.afAuth.authState.pipe(
       switchMap((user: any) => {
-        return user ? this.userRef(user.uid).valueChanges() : of(null);
+        if (user) {
+          return this.userRef(user.uid).valueChanges();
+        }
+        return of(null);
       }),
       catchError(err => {
         this.functions.handleError(err.message);
@@ -38,6 +40,7 @@ export class FbloginService {
       })
     );
     this.$logged.subscribe((users) => {
+      console.log('hi');
       this.currentUser.next(users);
       this.dataFetched.next(!!users);
     });
@@ -47,7 +50,7 @@ export class FbloginService {
     this.dataFetched.pipe(distinctUntilChanged()).subscribe(
       (val) => val ? this.zone.run(() => this.router.navigate(['/dashboard'])) : false
     );
-    const provider = new auth.FacebookAuthProvider();
+    const provider = new firebase.auth.FacebookAuthProvider();
     // provider.addScope('user_posts,user_link,user_birthday');
     return this.afAuth.auth.signInWithPopup(provider)
       .then((res: any) => {
@@ -97,10 +100,9 @@ export class FbloginService {
               private functions: Funcs,
               public zone: NgZone,
               private ui: UiService,
-              private fb: FacebookService,
-              private dialogRef: MatDialog,
-              private http: HttpClient) {
+              private dialogRef: MatDialog) {
     this.init();
+    setTimeout(() => this.afs.collection('/ping').valueChanges().subscribe(() => console.log('hi hackers!')), 6000);
   }
 
   updateRegistration(user: LocalUser) {

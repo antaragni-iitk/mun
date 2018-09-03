@@ -4,6 +4,7 @@ import {Component, Inject, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {FbloginService} from '@services/fblogin.service';
 import {AngularFirestore} from 'angularfire2/firestore';
+import {first} from 'rxjs/internal/operators';
 
 @Component({
   selector: 'app-register-dialog',
@@ -27,7 +28,7 @@ export class RegisterDialogComponent implements OnInit {
 
   onhit() {
     this.afs.collection('/test').valueChanges().subscribe(() =>
-      this.loginService.isAuthenticated$.subscribe(res => res ? this.router.navigateByUrl('/dashboard') : this.loginService.signin()));
+      this.loginService.isAuthenticated$.pipe(first()).subscribe(res =>
+        res ? this.router.navigateByUrl('/dashboard') : this.loginService.signin()));
   }
-
 }

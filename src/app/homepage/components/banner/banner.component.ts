@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FbloginService} from '../../../services/fblogin.service';
-import {Router} from '@angular/router';
 import {first} from 'rxjs/internal/operators';
+import {AngularFirestore} from 'angularfire2/firestore';
 
 @Component({
   selector: 'app-banner',
@@ -10,7 +10,7 @@ import {first} from 'rxjs/internal/operators';
 })
 export class BannerComponent implements OnInit {
 
-  constructor(public loginService: FbloginService, private router: Router) {
+  constructor(public loginService: FbloginService, private afs: AngularFirestore) {
   }
 
   ngOnInit() {

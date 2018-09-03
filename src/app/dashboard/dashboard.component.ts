@@ -25,11 +25,6 @@ export class DashboardComponent implements OnInit {
     this.user = this.fbloginservice.currentUser;
   }
 
-  getState(outlet) {
-    // Changing the activatedRouteData.state triggers the animation
-    return outlet.activatedRoute.url;
-  }
-
   // copyit() {
   //   this.ref.nativeElement.select();
   //   document.execCommand('copy');

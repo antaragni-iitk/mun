@@ -1,7 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {Subject} from 'rxjs/Subject';
-import {AntaragniFeedService} from '../services/feed';
-import {HttpClient} from '@angular/common/http';
 
 interface IAlert {
   type: string;
@@ -21,15 +19,11 @@ export class AntaragniFeedComponent implements OnInit {
     message: null
   };
 
-  constructor(private feedService: AntaragniFeedService,
-              private http: HttpClient) {
+  constructor() {
   }
 
   ngOnInit() {
     // this.feeds = this.feedService.getAllPosts();
   }
 
-  sharePost(post) {
-    this.feedService.sharePost(post.permalink_url, post.id);
-  }
 }

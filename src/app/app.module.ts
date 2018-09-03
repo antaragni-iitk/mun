@@ -27,9 +27,7 @@ import {AngularFirestoreModule} from 'angularfire2/firestore';
 import {environment} from '../environments/environment';
 import {HttpClientModule} from '@angular/common/http';
 import {AnalyticsDirective} from './directives/analytics.directive';
-import {AntaragniFeedService} from './services/feed';
 import {AntaragniFeedComponent} from './antaragni-feed';
-import {FacebookModule} from 'ngx-facebook';
 import {FaqComponent} from './homepage/components/faq/faq.component';
 import { FooterComponent } from './homepage/components/footer/footer.component';
 import { SponsorsComponent } from './homepage/components/sponsors/sponsors.component';
@@ -87,10 +85,9 @@ import { CollabComponent } from './homepage/components/collab/collab.component';
     FlexLayoutModule,
     NgsRevealModule.forRoot(),
     MatComponentsModule,
-    FacebookModule.forRoot(),
     ParticlesModule,
   ],
-  providers: [UiService, Funcs, AntaragniFeedService, ContentService],
+  providers: [UiService, Funcs, ContentService],
   bootstrap: [AppComponent],
   entryComponents: [DialogMessageComponent, CommitteeComponent, AntaragniComponent, LetterComponent, RegisterDialogComponent]
 })

@@ -14,8 +14,6 @@ export class NavbarComponent {
     {name: 'Home', id: 'home'},
   ];
 
-  @Input() selectedLink = 'home';
-
   constructor(private ui: UiService, private fblogin: FbloginService) {
   }
 

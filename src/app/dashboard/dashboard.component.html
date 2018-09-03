@@ -27,9 +27,9 @@
       </mat-card>
     </div>
   </mat-drawer>
-  <app-navbar [selectedLink]="(getState(o)|async)[0]?.path"></app-navbar>
-  <div [@bounceOutLeft]="getState(o)">
+  <app-navbar></app-navbar>
+  <!--<div [@bounceOutLeft]="getState(o)">-->
     <router-outlet #o="outlet"></router-outlet>
-  </div>
+  <!--</div>-->
 </mat-drawer-container>
 

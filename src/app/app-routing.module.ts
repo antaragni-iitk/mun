@@ -5,7 +5,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {LandingComponent} from './homepage/components/landing/landing.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {RegisterComponent} from './dashboard/components/register/register.component';
-import {AuthGuard, guards, LocalUserGuard, LoggedInGuard, RegisteredGuard, RegisteredUserGuard} from './guards';
+import {AuthGuard, guards, LocalUserGuard, RegisteredGuard, RegisteredUserGuard} from './guards';
 import {AntaragniFeedComponent} from './antaragni-feed';
 
 const routes: Routes = [
