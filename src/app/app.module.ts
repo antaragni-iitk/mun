@@ -80,7 +80,7 @@ import { CollabComponent } from './homepage/components/collab/collab.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     HttpClientModule,
-    AngularFirestoreModule,
+    AngularFirestoreModule.enablePersistence(),
     AppRoutingModule,
     FlexLayoutModule,
     NgsRevealModule.forRoot(),
