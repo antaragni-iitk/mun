@@ -248,7 +248,7 @@ Apache License
  See the License for the specific language governing permissions and
  limitations under the License.
 
-firebase@5.1.0
+firebase@5.4.2
 Apache-2.0
 Apache-2.0
 
@@ -287,7 +287,7 @@ LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-@firebase/firestore@0.5.5
+@firebase/firestore@0.7.2
 Apache-2.0
 Apache-2.0
 
