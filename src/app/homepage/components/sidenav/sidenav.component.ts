@@ -16,7 +16,7 @@ export class SidenavComponent implements OnInit {
     {name: 'About', id: 'about', class: 'fas fa-info'},
     {name: 'Committees', id: 'committees', class: 'fas fa-male'},
     {name: 'Resources', id: 'resources', class: 'fas fa-bookmark'},
-    {name: 'Registeration', id: 'registeration', class: 'fas fa-book-open'},
+    {name: 'Registration', id: 'registeration', class: 'fas fa-book-open'},
     // {name: 'Ambassadors', id: 'ambassadors', class: 'fa fa-home'},
     {name: 'FAQ', id: 'faq', class: 'fas fa-question-circle'},
     {name: 'Contact Us', id: 'contact', class: 'fas fa-phone'},
