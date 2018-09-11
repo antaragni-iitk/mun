@@ -29,7 +29,6 @@ export class RegisterComponent implements OnInit {
 
   registerAs = [
     {id: 1, name: 'Delegate'},
-    {id: 2, name: 'Executive Board Member'},
     {id: 3, name: 'International Press'},
   ];
 
