@@ -58,9 +58,10 @@ export class FbloginService {
         this.setUser(res, res);
         return res;
       }).then(() => {
-        this.dataFetched.pipe(delay(500), first()).subscribe((res) => !res ? this.dialogRef.open(ConfirmDialogComponent, {
+        this.dialogRef.open(ConfirmDialogComponent, {
           panelClass: 'black-overlay'
-        }) : 200);
+        });
+        this.dataFetched.subscribe((res) => res ? this.dialogRef.closeAll()  : 200);
       })
       .catch(err => {
         this.functions.handleError(err.message);
