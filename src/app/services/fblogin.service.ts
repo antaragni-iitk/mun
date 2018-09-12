@@ -1,3 +1,4 @@
+import { ConfirmDialogComponent } from './../dialogs/confirm-dialog/confirm-dialog.component';
 import {Component, Injectable, NgZone} from '@angular/core';
 import {Router} from '@angular/router';
 
@@ -5,8 +6,8 @@ import {BehaviorSubject, Observable, of, Subject} from 'rxjs';
 import {AngularFirestore, AngularFirestoreDocument} from 'angularfire2/firestore';
 import {AngularFireAuth} from 'angularfire2/auth';
 import {Funcs} from '../utility/function';
-import {catchError, switchMap} from 'rxjs/operators';
-import {distinctUntilChanged, map} from 'rxjs/internal/operators';
+import {catchError, switchMap, } from 'rxjs/operators';
+import { distinctUntilChanged, delay, map, first } from 'rxjs/internal/operators';
 import {ILocalUser, LocalUser} from '../models/localuser';
 import {UiService} from '@services/ui.service';
 import {MatDialog} from '@angular/material';
@@ -56,6 +57,10 @@ export class FbloginService {
       .then((res: any) => {
         this.setUser(res, res);
         return res;
+      }).then(() => {
+        this.dataFetched.pipe(delay(500), first()).subscribe((res) => !res ? this.dialogRef.open(ConfirmDialogComponent, {
+          panelClass: 'black-overlay'
+        }) : 200);
       })
       .catch(err => {
         this.functions.handleError(err.message);

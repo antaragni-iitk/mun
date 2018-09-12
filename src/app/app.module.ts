@@ -42,6 +42,7 @@ import { CommitteeComponent } from './homepage/components/committees/committee/c
 import { AntaragniComponent } from './homepage/components/about/antaragni/antaragni.component';
 import { RegisterDialogComponent } from './homepage/components/registeration/register-dialog/register-dialog.component';
 import { CollabComponent } from './homepage/components/collab/collab.component';
+import { ConfirmDialogComponent } from './dialogs/confirm-dialog/confirm-dialog.component';
 
 
 @NgModule({
@@ -72,6 +73,7 @@ import { CollabComponent } from './homepage/components/collab/collab.component';
     ContactComponent,
     RegisterDialogComponent,
     CollabComponent,
+    ConfirmDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -89,7 +91,7 @@ import { CollabComponent } from './homepage/components/collab/collab.component';
   ],
   providers: [UiService, Funcs, ContentService],
   bootstrap: [AppComponent],
-  entryComponents: [DialogMessageComponent, CommitteeComponent, AntaragniComponent, LetterComponent, RegisterDialogComponent]
+  entryComponents: [DialogMessageComponent, CommitteeComponent, AntaragniComponent, LetterComponent, RegisterDialogComponent, ConfirmDialogComponent]
 })
 export class AppModule {
 }

@@ -7,6 +7,8 @@ import {BehaviorSubject, Subject} from 'rxjs';
 export class UiService {
   sidenav = new BehaviorSubject<boolean>(true);
   scrollPos = new BehaviorSubject<boolean>(false);
+  sidenav2 = new Subject<boolean>();
+
 
   goAbout = new Subject();
   goWhy = new Subject();
