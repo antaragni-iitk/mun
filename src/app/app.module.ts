@@ -1,11 +1,11 @@
-import { LetterComponent } from './homepage/components/about/letter/letter.component';
-import { HomeComponent } from './homepage/components/home/home.component';
+import {LetterComponent} from './homepage/components/about/letter/letter.component';
+import {HomeComponent} from './homepage/components/home/home.component';
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatComponentsModule} from './mat-components/mat-components.module';
-import { ParticlesModule } from 'angular-particle';
+import {ParticlesModule} from 'angular-particle';
 
 import {AppComponent} from './app-component/app.component';
 import {BannerComponent} from './homepage/components/banner/banner.component';
@@ -29,20 +29,22 @@ import {HttpClientModule} from '@angular/common/http';
 import {AnalyticsDirective} from './directives/analytics.directive';
 import {AntaragniFeedComponent} from './antaragni-feed';
 import {FaqComponent} from './homepage/components/faq/faq.component';
-import { FooterComponent } from './homepage/components/footer/footer.component';
-import { SponsorsComponent } from './homepage/components/sponsors/sponsors.component';
+import {FooterComponent} from './homepage/components/footer/footer.component';
+import {SponsorsComponent} from './homepage/components/sponsors/sponsors.component';
 import {DialogMessageComponent} from '@services/fblogin.service';
-import { SidenavComponent } from './homepage/components/sidenav/sidenav.component';
-import { ResourcesComponent } from './homepage/components/resources/resources.component';
-import { RegisterationComponent } from './homepage/components/registeration/registeration.component';
-import { MouseDownComponent } from './homepage/components/footer/mouse-down/mouse-down.component';
-import { CommitteesComponent } from './homepage/components/committees/committees.component';
-import { TestComponent } from './test/test.component';
-import { CommitteeComponent } from './homepage/components/committees/committee/committee.component';
-import { AntaragniComponent } from './homepage/components/about/antaragni/antaragni.component';
-import { RegisterDialogComponent } from './homepage/components/registeration/register-dialog/register-dialog.component';
-import { CollabComponent } from './homepage/components/collab/collab.component';
-import { ConfirmDialogComponent } from './dialogs/confirm-dialog/confirm-dialog.component';
+import {SidenavComponent} from './homepage/components/sidenav/sidenav.component';
+import {ResourcesComponent} from './homepage/components/resources/resources.component';
+import {RegisterationComponent} from './homepage/components/registeration/registeration.component';
+import {MouseDownComponent} from './homepage/components/footer/mouse-down/mouse-down.component';
+import {CommitteesComponent} from './homepage/components/committees/committees.component';
+import {TestComponent} from './test/test.component';
+import {CommitteeComponent} from './homepage/components/committees/committee/committee.component';
+import {AntaragniComponent} from './homepage/components/about/antaragni/antaragni.component';
+import {RegisterDialogComponent} from './homepage/components/registeration/register-dialog/register-dialog.component';
+import {CollabComponent} from './homepage/components/collab/collab.component';
+import {ConfirmDialogComponent} from './dialogs/confirm-dialog/confirm-dialog.component';
+import {PaydialogComponent} from './dialogs/paydialog/paydialog.component';
+import {WaitSpinnerComponent} from './dialogs/wait-spinner/wait-spinner.component';
 
 
 @NgModule({
@@ -74,6 +76,8 @@ import { ConfirmDialogComponent } from './dialogs/confirm-dialog/confirm-dialog.
     RegisterDialogComponent,
     CollabComponent,
     ConfirmDialogComponent,
+    PaydialogComponent,
+    WaitSpinnerComponent,
   ],
   imports: [
     BrowserModule,
@@ -91,7 +95,7 @@ import { ConfirmDialogComponent } from './dialogs/confirm-dialog/confirm-dialog.
   ],
   providers: [UiService, Funcs, ContentService],
   bootstrap: [AppComponent],
-  entryComponents: [DialogMessageComponent, CommitteeComponent, AntaragniComponent, LetterComponent, RegisterDialogComponent, ConfirmDialogComponent]
+  entryComponents: [DialogMessageComponent, WaitSpinnerComponent, PaydialogComponent, CommitteeComponent, AntaragniComponent, LetterComponent, RegisterDialogComponent, ConfirmDialogComponent]
 })
 export class AppModule {
 }

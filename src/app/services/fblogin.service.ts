@@ -113,7 +113,7 @@ export class FbloginService {
 
   updateRegistration(user: LocalUser) {
     this.updateUser(user)
-      .then(() => this.zone.run(() => this.router.navigate(['/'])))
+      .then(() => this.zone.run(() => this.router.navigate(['/dashboard/home'])))
       .catch((err) => this.functions.handleError(err));
   }
 

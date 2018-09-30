@@ -54,7 +54,6 @@ export interface Campus {
 }
 
 export interface Registration {
-  manifest: Array<number>;
   post: string;
 }
 

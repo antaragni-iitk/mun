@@ -8,7 +8,7 @@
       </mat-card>
       <mat-divider></mat-divider>
       <mat-card fxLayout="row" fxLayoutAlign="left center" fxLayoutGap="15px">
-        <img [src]="(user|async)?.personal.picture" class="img-circle">
+        <img [src]="(user|async)?.personal?.picture" class="img-circle">
         <div fxLayout="column" fxLayoutAlign="center left">
           <div class="name">{{(user|async)?.name}}</div>
           <div class="clg"><i class="fa fa-graduation-cap"></i> IIT Kanpur</div>
@@ -23,7 +23,7 @@
       <!--</mat-card>-->
       <mat-card fxLayout="row" fxLayoutAlign="left center" fxLayoutGap="15px">
         <div class="heading">Registered As:</div>
-        <div class="registeredAs">{{(user | async)?.registration.post}}</div>
+        <div class="registeredAs">{{(user | async)?.registration?.post}}</div>
       </mat-card>
     </div>
   </mat-drawer>

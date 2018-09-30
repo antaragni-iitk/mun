@@ -4,7 +4,7 @@
     <div class="form">
       <mat-form-field>
         <input required #name="ngModel" name="name" matInput placeholder="Name"
-               [(ngModel)]="newuser.name" [disabled]="newuser$.name">
+               [(ngModel)]="newuser.name" [disabled]="newuser$?.name">
         <mat-error *ngIf="name.errors">
           Name is required.
         </mat-error>
@@ -35,7 +35,7 @@
       <mat-form-field>
         <textarea required ngModel #address="ngModel" name="address" matInput placeholder="Postal Address"
                   [(ngModel)]="newuser.personal.postalAddress"
-                  [disabled]="newuser$.personal.postalAddress?newuser.personal.postalAddress!='':false"></textarea>
+                  [disabled]="newuser$?.personal.postalAddress?newuser?.personal.postalAddress!='':false"></textarea>
         <mat-error *ngIf="address.errors">Required</mat-error>
       </mat-form-field>
 
@@ -46,7 +46,7 @@
               <input required #pincode="ngModel" name="pincode" type="number" matInput placeholder="Pincode"
                      minlength="6" maxlength="6"
                      [(ngModel)]="newuser.personal.zipcode"
-                     [disabled]="newuser$.personal.zipcode">
+                     [disabled]="newuser$?.personal.zipcode">
               <!--<matTooltip ="6 digits" [matTooltipPosition]="'left'" >-->
               <mat-error *ngIf="pincode.errors">Required</mat-error>
             </mat-form-field>
@@ -56,7 +56,7 @@
               <input required #fbLink="ngModel" name="facebook Link" matInput
                      placeholder="facebook link to your profile"
                      [(ngModel)]="newuser.facebook.facebookLink"
-                     [disabled]="newuser$.facebook.facebookLink?newuser.facebook.facebookLink!='':false">
+                     [disabled]="newuser$?.facebook.facebookLink?newuser?.facebook.facebookLink!='':false">
               <mat-error *ngIf="fbLink.errors">Required</mat-error>
             </mat-form-field>
           </td>
@@ -66,7 +66,7 @@
             <mat-form-field class="point9-width">
               <input required #college="ngModel" name="college" matInput placeholder="College"
                      [(ngModel)]="newuser.personal.college"
-                     [disabled]="newuser$.personal.college?newuser$.personal.college!='':false">
+                     [disabled]="newuser$?.personal.college?newuser$?.personal.college!='':false">
               <mat-error *ngIf="college.errors">Required</mat-error>
             </mat-form-field>
           </td>
@@ -74,7 +74,7 @@
             <mat-form-field class="full-width">
               <input required #collegeCity="ngModel" name="collegeCity" matInput placeholder="City of College"
                      [(ngModel)]="newuser.personal.city"
-                     [disabled]="newuser$.personal.city?newuser$.personal.city!='':false">
+                     [disabled]="newuser$?.personal.city?newuser$?.personal.city!='':false">
               <mat-error *ngIf="collegeCity.errors">Required</mat-error>
             </mat-form-field>
           </td>
@@ -85,10 +85,10 @@
               <input matInput required #birthdate="ngModel" name="birthdate" [matDatepicker]="picker"
                      placeholder="Birthdate"
                      [(ngModel)]="newuser.personal.birthday"
-                     [disabled]="newuser$.personal.birthday?newuser$.personal.birthday!='':false"
+                     [disabled]="newuser$?.personal.birthday?newuser$?.personal.birthday!='':false"
                      (click)="picker.open()" (focus)="picker.open()">
               <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-              <mat-datepicker #picker [disabled]="newuser$.personal.birthday?newuser$.personal.birthday!='':false"></mat-datepicker>
+              <mat-datepicker #picker [disabled]="newuser$?.personal.birthday?newuser$?.personal.birthday!='':false"></mat-datepicker>
               <mat-error *ngIf="birthdate.errors">Date Required</mat-error>
             </mat-form-field>
           </td>
@@ -110,7 +110,7 @@
                      placeholder="Mobile Number" type="tel"
                      [(ngModel)]="newuser.personal.phoneNumber"
                      matTooltip="10 digits" [matTooltipPosition]="'left'"
-                     [disabled]="newuser$.personal.phoneNumber?newuser.personal.phoneNumber!='':false">
+                     [disabled]="newuser$?.personal.phoneNumber?newuser?.personal.phoneNumber!='':false">
               <mat-error *ngIf="mobile.errors">Required 10 digits</mat-error>
             </mat-form-field>
           </td>
@@ -119,7 +119,7 @@
               <input required #whatsApp="ngModel" name="whatsApp" matInput minlength="10" maxlength="10"
                      placeholder="WhatsApp Number" type="tel"
                      [(ngModel)]="newuser.personal.whatsAppNumber" matTooltip="10 digits" [matTooltipPosition]="'left'"
-                     [disabled]="newuser$.personal.whatsAppNumber?newuser$.personal.whatsAppNumber!='':false">
+                     [disabled]="newuser$?.personal.whatsAppNumber?newuser$?.personal.whatsAppNumber!='':false">
               <mat-error *ngIf="whatsApp.errors">Required 10 digits</mat-error>
             </mat-form-field>
           </td>

@@ -2,8 +2,9 @@ import {Component, OnInit} from '@angular/core';
 import {FbloginService} from '@services/fblogin.service';
 import {LocalUser} from '@models/localuser';
 import {AngularFirestore} from 'angularfire2/firestore';
-import {take} from 'rxjs/internal/operators';
 import {Funcs} from '../../../utility/function';
+import {MatDialog} from '@angular/material';
+import {WaitSpinnerComponent} from '../../../dialogs/wait-spinner/wait-spinner.component';
 
 @Component({
   selector: 'app-register',
@@ -35,13 +36,16 @@ export class RegisterComponent implements OnInit {
   newuser = new LocalUser();
   newuser$ = new LocalUser();
 
-  constructor(private fblogin: FbloginService, private afs: AngularFirestore, private fun: Funcs) {
+  constructor(private fblogin: FbloginService, private afs: AngularFirestore, private fun: Funcs, private md: MatDialog) {
     this.fun.handleError('please fill the missed out data before proceeding');
   }
 
   ngOnInit() {
     this.fblogin.currentUser.subscribe((user: LocalUser) => {
       this.newuser = user;
+      if (!this.newuser.registration) {
+        this.newuser.registration = {post: ''};
+      }
       this.newuser$ = JSON.parse(JSON.stringify(user));
     });
   }
@@ -50,5 +54,8 @@ export class RegisterComponent implements OnInit {
     this.newuser.firstUpdate = true;
     this.newuser.munUpdate = true;
     this.fblogin.updateRegistration(this.newuser);
+    this.md.open(WaitSpinnerComponent, {
+      data: 'Registereing your changes ...'
+    });
   }
 }

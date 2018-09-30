@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FbloginService} from '../../../services/fblogin.service';
 import {first} from 'rxjs/internal/operators';
 import {AngularFirestore} from 'angularfire2/firestore';
+import {PaymentService} from '@services/payment.service';
 
 @Component({
   selector: 'app-banner',
@@ -10,11 +11,17 @@ import {AngularFirestore} from 'angularfire2/firestore';
 })
 export class BannerComponent implements OnInit {
 
-  constructor(public loginService: FbloginService, private afs: AngularFirestore) {
+  constructor(public loginService: FbloginService, private afs: AngularFirestore, private paymentService: PaymentService) {
   }
 
   ngOnInit() {
 
+  }
+
+  paynow() {
+    this.paymentService.showPopup({
+      eventcode: 'mun-antaragni18-313203',
+    });
   }
 
   onhit() {

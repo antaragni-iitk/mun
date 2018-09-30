@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {
   MatButtonModule, MatCardModule, MatDatepickerModule, MatDialogModule, MatDividerModule, MatInputModule, MatNativeDateModule,
   MatPaginatorModule, MatListModule,
-  MatSelectModule, MatSnackBarModule, MatSortModule, MatTableModule, MatTabsModule, MatTooltipModule
+  MatSelectModule, MatSnackBarModule, MatProgressSpinnerModule, MatSortModule, MatTableModule, MatTabsModule, MatTooltipModule, MatRadioModule
 } from '@angular/material';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { ScrollDispatchModule } from '@angular/cdk/scrolling';
@@ -26,7 +26,9 @@ import { ScrollDispatchModule } from '@angular/cdk/scrolling';
     MatSidenavModule,
     MatDialogModule,
     MatListModule,
-    ScrollDispatchModule
+    ScrollDispatchModule,
+    MatRadioModule,
+    MatProgressSpinnerModule,
   ]
 })
 export class MatComponentsModule {

@@ -6,6 +6,7 @@
     <div class="text">Antaragni</div>
   </div>
   <div class="_links" fxLayout="row" fxLayoutGap="30px">
+    <div class="btn" (click)="paynow()">Payments</div>
     <div class="btn" (click)="onhit()"><i class="fab fa-facebook-f"></i>{{(loginService.isAuthenticated$| async)?'Logout': 'Log In'}}</div>
   </div>
 </div>
