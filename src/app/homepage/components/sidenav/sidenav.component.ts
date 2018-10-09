@@ -74,17 +74,17 @@ export class SidenavComponent implements OnInit {
     if ($event.srcElement.scrollTop <= window.screen.height / 2) { this.inView = 0; }
     if (($event.srcElement.scrollTop <= (window.screen.height * 3 / 2)) && ($event.srcElement.scrollTop > (window.screen.height / 2))) { this.inView = 1; }
     if (this.mobile) {
-      if (($event.srcElement.scrollTop <= (window.screen.height * 38 / 10)) && ($event.srcElement.scrollTop > (window.screen.height * 3 / 2))) { this.inView = 2; }
-      if (($event.srcElement.scrollTop <= (window.screen.height * 47 / 10)) && ($event.srcElement.scrollTop > (window.screen.height * 38 / 10))) { this.inView = 3; }
-      if (($event.srcElement.scrollTop <= (window.screen.height * 62 / 10)) && ($event.srcElement.scrollTop > (window.screen.height * 47 / 10))) { this.inView = 4; }
-      if (($event.srcElement.scrollTop <= (window.screen.height * 74 / 10)) && ($event.srcElement.scrollTop > (window.screen.height * 62 / 10))) { this.inView = 5; }
-      if (($event.srcElement.scrollTop > (window.screen.height * 74 / 10))) { this.inView = 6; }
+      if (($event.srcElement.scrollTop <= (window.screen.height * 28 / 10)) && ($event.srcElement.scrollTop > (window.screen.height * 3 / 2))) { this.inView = 2; }
+      if (($event.srcElement.scrollTop <= (window.screen.height * 37 / 10)) && ($event.srcElement.scrollTop > (window.screen.height * 28 / 10))) { this.inView = 3; }
+      if (($event.srcElement.scrollTop <= (window.screen.height * 52 / 10)) && ($event.srcElement.scrollTop > (window.screen.height * 37 / 10))) { this.inView = 4; }
+      if (($event.srcElement.scrollTop <= (window.screen.height * 64 / 10)) && ($event.srcElement.scrollTop > (window.screen.height * 52 / 10))) { this.inView = 5; }
+      if (($event.srcElement.scrollTop > (window.screen.height * 64 / 10))) { this.inView = 6; }
     } else {
-      if (($event.srcElement.scrollTop <= (window.screen.height * 32 / 10)) && ($event.srcElement.scrollTop > (window.screen.height * 3 / 2))) { this.inView = 2; }
-      if (($event.srcElement.scrollTop <= (window.screen.height * 39 / 10)) && ($event.srcElement.scrollTop > (window.screen.height * 32 / 10))) { this.inView = 3; }
-      if (($event.srcElement.scrollTop <= (window.screen.height * 48 / 10)) && ($event.srcElement.scrollTop > (window.screen.height * 39 / 10))) { this.inView = 4; }
-      if (($event.srcElement.scrollTop <= (window.screen.height * 11 / 2)) && ($event.srcElement.scrollTop > (window.screen.height * 48 / 10))) { this.inView = 5; }
-      if (($event.srcElement.scrollTop > (window.screen.height * 11 / 2))) { this.inView = 6; }
+      if (($event.srcElement.scrollTop <= (window.screen.height * 22 / 10)) && ($event.srcElement.scrollTop > (window.screen.height * 3 / 2))) { this.inView = 2; }
+      if (($event.srcElement.scrollTop <= (window.screen.height * 29 / 10)) && ($event.srcElement.scrollTop > (window.screen.height * 22 / 10))) { this.inView = 3; }
+      if (($event.srcElement.scrollTop <= (window.screen.height * 38 / 10)) && ($event.srcElement.scrollTop > (window.screen.height * 29 / 10))) { this.inView = 4; }
+      if (($event.srcElement.scrollTop <= (window.screen.height * 9 / 2)) && ($event.srcElement.scrollTop > (window.screen.height * 38 / 10))) { this.inView = 5; }
+      if (($event.srcElement.scrollTop > (window.screen.height * 9 / 2))) { this.inView = 6; }
     }
   }
 }

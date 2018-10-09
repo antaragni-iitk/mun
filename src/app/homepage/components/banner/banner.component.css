@@ -97,6 +97,9 @@ img{
     background-color: transparent;
   }
   .btn{
-    
+    padding: 5px 10px;
+    line-height: unset;
+    min-height: unset;
+    font-size: 0.8rem;
   }
 }
