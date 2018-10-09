@@ -6,7 +6,8 @@
     <div class="text">Antaragni</div>
   </div>
   <div class="_links" fxLayout="row" fxLayoutGap="30px" fxLayoutGap.xs="5px">
-    <div class="btn" (click)="paynow()">Payments</div>
-    <div class="btn" (click)="onhit()"><i class="fab fa-facebook-f"></i>{{(loginService.isAuthenticated$| async)?'Logout': 'Log In'}}</div>
+    <div class="btn" (click)="paynow()">Register and Pay</div>
+    <div class="btn" routerLink="/dashboard" *ngIf="(loginService.isAuthenticated$| async)"><i class="fab fa-facebook-f"></i>Dashboard</div>
+    <div class="btn" (click)="onhit()" *ngIf="!(loginService.isAuthenticated$| async)"><i class="fab fa-facebook-f"></i>Login</div>
   </div>
 </div>
